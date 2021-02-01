@@ -1,0 +1,61 @@
+version: '3.7'
+
+services:
+  server:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: car-logo-quiz-server
+    container_name: car-logo-quiz-backend
+    command: /usr/src/app/node_modules/.bin/nodemon server.js
+    volumes:
+      - ./backend/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+    env_file: ./backend/.env
+    environment:
+      - NODE_ENV=development
+    networks:
+      - app-network
+
+  mongo:
+    image: mongo
+    container_name: car-logo-quiz-mongo
+    volumes:
+      - data-volume:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: car-logo-quiz-client
+    container_name: car-logo-quiz-frontend
+    command: npm start
+    volumes:
+      - ./client/:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+    environment:
+        - CHOKIDAR_USEPOLLING=true
+    networks:
+      - app-network
+    
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  data-volume:
+  node_modules:
+  web-root:
+    driver: local

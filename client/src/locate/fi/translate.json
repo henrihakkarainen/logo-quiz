@@ -1,0 +1,10 @@
+{
+  "translations": {
+    "home": "Koti",
+    "login": "Kirjaudu",
+    "languages": {
+      "en": "Englanti",
+      "fi": "Suomi"
+    }
+  }
+}

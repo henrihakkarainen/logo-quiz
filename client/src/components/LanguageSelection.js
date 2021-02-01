@@ -1,10 +1,11 @@
 import uk from '../images/icons/uk.png';
 import fin from '../images/icons/fin.png';
+import '../styles/LanguageSelection.css';
 
-export default function LanguageSelection(props) {
+const LanguageSelection = (props) => {
   return (
     <div className="language-selection">
-      <h3>Select language</h3>
+      <h3>Select Language</h3>
       <ul>
         <li>
           <button className="language-button" value="uk" onClick={props.onChangeLanguage}>
@@ -13,8 +14,8 @@ export default function LanguageSelection(props) {
           </button>
         </li>
         <li>
-          <button className="language-button" value="fin" onClick={props.onChangeLanguage}>
-            <img className="icon" src={fin} alt="FIN"></img>
+          <button className="language-button" value="fi" onClick={props.onChangeLanguage}>
+            <img className="icon" src={fin} alt="FI"></img>
             Suomi
           </button>
         </li>
@@ -22,3 +23,5 @@ export default function LanguageSelection(props) {
     </div>
   );
 }
+
+export default LanguageSelection;

@@ -1,0 +1,10 @@
+{
+  "translations": {
+    "home": "Home",
+    "login": "Login",
+    "languages": {
+      "en": "English",
+      "fi": "Finnish"
+    }
+  }
+}

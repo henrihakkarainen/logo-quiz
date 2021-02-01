@@ -1,29 +1,4 @@
 body {
-  background: url(./images/background/wooden_bg.jpg);
-}
-
-.language-selection {
-  margin: 35vh auto;
-  text-align: center;
-  border: 1px solid white;
-  border-radius: 10px;
-  width: 500px;
-  color: black;
-  background-color: white;
-  opacity: 0.5;
-}
-
-.language-selection ul {
-  list-style-type: none;
-  padding: 0px;
-}
-
-.language-button {
-  width: 250px;
-  border: none;
-  vertical-align: middle;
-}
-
-.language-button img {
-  width: 30%;
+  background: url(./images/background/white_bg.jpg) no-repeat center center fixed;
+  background-size: cover;
 }

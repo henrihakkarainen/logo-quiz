@@ -3,6 +3,8 @@ import { initReactI18next } from 'react-i18next';
 import EN from './locate/en/translate.json';
 import FI from './locate/fi/translate.json';
 
+const language = localStorage.getItem('language');
+
 i18n
 .use(initReactI18next)
 .init({
@@ -10,7 +12,7 @@ i18n
     en: EN,
     fi: FI
   },
-  lng: "en",
+  lng: language ? language : "en",
   fallbackLng: "en",
   debug: true,
   ns: ["translations"],

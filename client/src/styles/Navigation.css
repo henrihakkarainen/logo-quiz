@@ -1,6 +1,5 @@
 nav {
   margin: 0 15% 0 15%;
-  
 }
 
 nav ul {
@@ -31,6 +30,7 @@ nav ul li a:hover, .dropdown-selection:hover, .dropdown-selection button:hover {
 
 .nav-right {
   float: right;
+  min-width: 120px;
 }
 
 .dropdown-selection {

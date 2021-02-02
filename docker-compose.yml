@@ -5,8 +5,8 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    image: car-logo-quiz-server
-    container_name: car-logo-quiz-backend
+    image: logo-quiz-server
+    container_name: logo-quiz-backend
     command: /usr/src/app/node_modules/.bin/nodemon server.js
     volumes:
       - ./backend/:/usr/src/app
@@ -23,7 +23,7 @@ services:
 
   mongo:
     image: mongo
-    container_name: car-logo-quiz-mongo
+    container_name: logo-quiz-mongo
     volumes:
       - data-volume:/data/db
     ports:
@@ -35,8 +35,8 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
-    image: car-logo-quiz-client
-    container_name: car-logo-quiz-frontend
+    image: logo-quiz-client
+    container_name: logo-quiz-frontend
     command: npm start
     volumes:
       - ./client/:/usr/src/app

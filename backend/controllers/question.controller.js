@@ -12,7 +12,9 @@ const create = async (req, res) => {
     });
   }
 
-  const category = await Category.findOne({ title: categoryTitle }).exec();
+  const category = await Category.findOne({
+    $or: [ { 'title.en': categoryTitle }, { 'title.fi': categoryTitle } ]
+  }).exec();
   if (!category) {
     return res.status(500).json({
       message: `Category "${categoryTitle}" was not found and question couldn't be added`
@@ -40,45 +42,117 @@ const create = async (req, res) => {
     category
   });
 
-  question
-    .save()
-    .then((data) => {
-      res.json(data);
-    })
-    .catch((err) => {
-      res.status(500).json({
-        message: err.message || 'Adding the question failed for unknown reason'
-      });
+  try {
+    const data = await question.save();
+    res.status(201).json(data);
+  } catch (err) {
+    res.status(500).json({
+      message: err.message || 'Adding the question failed for unknown reason'
     });
+  }
 }
 
 // Retrieve all questions
-const findAll = (req, res) => {
+const findAll = async (req, res) => {
   const { category, difficulty } = req.query;
-  const condition = category ? { 'category.title' : { $regex: new RegExp(category), $options: 'i' } } : {};
+  const query = {
+    $or : [
+      { 'category.title.en' : { $regex: new RegExp(`^${category}$`), $options: 'i' } },
+      { 'category.title.fi' : { $regex: new RegExp(`^${category}$`), $options: 'i' } }
+    ]
+  }
+  let condition = category ? query : {};
 
-  console.log(condition)
-  Question.find(condition)
-    .then((data) => {
-      res.json(data);
-    })
-    .catch((err) => {
-      res.status(500).json({
-        message: err.message || 'Server failed to retrieve questions'
+  if (category && difficulty) {
+    try {
+      condition = {
+        ...query,
+        difficulty: parseInt(difficulty)
+      };
+    } catch (err) {
+      return res.status(400).json({
+        message: err.message || 'Query parameter difficulty must be an integer'
       });
+    }
+  }
+
+  try {
+    const data = await Question.find(condition).exec();
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({
+      message: err.message || 'Server failed to retrieve questions'
     });
+  }
 }
 
-const findOne = (req, res) => {
+const findOne = async (req, res) => {
+  const { id } = req.params;
 
+  try {
+    const question = await Question.findById(id).exec();
+    if (!question) {
+      res.status(404).json({
+        message: `Question with id: ${id} was not found`
+      });
+    } else {
+      res.json(question);
+    }
+  } catch (err) {
+    res.status(500).json({
+      message: `Error when trying to retrieve Question with id: ${id}`
+    });
+  }  
 }
 
-const update = (req, res) => {
+const update = async (req, res) => {
+  const { id } = req.params;
 
+  try {
+    const question = await Question.findById(id).exec();
+    if (!question) {
+      res.status(404).json({
+        message: `Question with id: ${id} was not found`
+      });
+    } else {
+      for (let field in Question.schema.paths) {
+        if ((field !== '_id') && (field !== '__v') && (field !== 'category')) {
+          if (req.body[field] !== undefined)
+            question[field] = req.body[field];
+        }
+      }
+      if (question.options.includes(question.correct)) {
+        return res.status(400).json({
+          message: 'Options array must not include the correct answer'
+        });
+      }
+      const data = await question.save();
+      res.json(data);
+    }
+  } catch (err) {
+    res.status(500).json({
+      message: err.message || `Error when trying to update Question with id: ${id}`
+    })
+  }
 }
 
-const remove = (req, res) => {
+const remove = async (req, res) => {
+  const { id } = req.params;
 
+  try {
+    const question = await Question.findByIdAndDelete(id);
+    if (!question) {
+      res.status(404).json({
+        message: `Cannot delete Question with id: ${id} because that was not found`
+      })
+    } else {
+      res.status(204).json();
+    }
+  } catch (err) {
+    res.status(500).json({
+      message: err.message || `Error when trying to delete Question with id: ${id}`
+    });
+  }
 }
 
 const removeAll = async (req, res) => {

@@ -3,16 +3,32 @@ const Schema = mongoose.Schema;
 
 const categorySchema = new Schema({
   title: {
-    type: String,
-    required: true,
-    minlength: 3,
-    maxlength: 50
+    en: {
+      type: String,
+      required: true,
+      minlength: 3,
+      maxlength: 50
+    },
+    fi: {
+      type: String,
+      required: true,
+      minlength: 3,
+      maxlength: 50
+    }
   },
   description: {
-    type: String,
-    required: true,
-    minlength: 5,
-    maxlength: 100
+    en: {
+      type: String,
+      required: true,
+      minlength: 5,
+      maxlength: 100
+    },
+    fi: {
+      type: String,
+      required: true,
+      minlength: 5,
+      maxlength: 100
+    }
   }
 });
 

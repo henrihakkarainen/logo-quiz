@@ -33,8 +33,15 @@ const create = async (req, res) => {
 }
 
 const findAll = async (req, res) => {
-  const { title } = req.body;
-  const condition = title ? { title: { $regex: new RegExp(title), $options: 'i' } } : {}
+  const { title } = req.query;
+  const query = {
+    $or: [
+      { 'title.en': { $regex: new RegExp(`^${title}$`), $options: 'i' } },
+      { 'title.fi': { $regex: new RegExp(`^${title}$`), $options: 'i' } }
+    ]
+  }
+  const condition = title ? query : {}
+  console.log(condition)
   
   try {
     const data = await Category.find(condition);
@@ -46,7 +53,88 @@ const findAll = async (req, res) => {
   }  
 }
 
+const findOne = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const category = await Category.findById(id).exec();
+    if (!category) {
+      res.status(404).json({
+        message: `Category with id: ${id} was not found`
+      });
+    } else {
+      res.json(category);
+    }
+  } catch (err) {
+    res.status(500).json({
+      message: err.message | `Error when trying to retrieve Category with id: ${id}`
+    });
+  }  
+}
+
+const update = async (req, res) => {
+  const { id } = req.params;
+  const { title, description } = req.body;
+
+  try {
+    const category = await Category.findById(id).exec();
+    if (!category) {
+      res.status(404).json({
+        message: `Category with id: ${id} was not found`
+      });
+    } else {
+      if (title?.en) category.title.en = title.en;
+      if (title?.fi) category.title.fi = title.fi;
+      if (description?.en) category.description.en = description.en;
+      if (description?.fi) category.description.fi = description.fi;
+      
+      const data = await category.save();
+      res.json(data);
+    }
+  } catch (err) {
+    res.status(500).json({
+      message: err.message || `Error when trying to update Category with id: ${id}`
+    })
+  }
+}
+
+const remove = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const category = await Category.findByIdAndDelete(id);
+    if (!category) {
+      res.status(404).json({
+        message: `Cannot delete Category with id: ${id} because that was not found`
+      });
+    } else {
+      res.status(204).json();
+    }
+  } catch (err) {
+    res.status(500).json({
+      message: err.message || `Error when trying to delete Category with id: ${id}`
+    })
+  }
+}
+
+const removeAll = async (req, res) => {
+  try {
+    const data = await Category.deleteMany({});
+    res.json({
+      message: `${data.deletedCount} categories were deleted.`
+    });
+  } catch (err) {
+    res.status(500).json({
+      message: err.message || 'Deleting categories did not succeed.'
+    });
+  }
+}
+
 module.exports = {
   create,
-  findAll
+  findAll,
+  findOne,
+  update,
+  remove,
+  removeAll
 };

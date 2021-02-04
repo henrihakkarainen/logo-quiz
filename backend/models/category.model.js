@@ -29,6 +29,10 @@ const categorySchema = new Schema({
       minlength: 5,
       maxlength: 100
     }
+  },
+  published: {
+    type: Boolean,
+    default: false
   }
 });
 

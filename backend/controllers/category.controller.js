@@ -41,7 +41,6 @@ const findAll = async (req, res) => {
     ]
   }
   const condition = title ? query : {}
-  console.log(condition)
   
   try {
     const data = await Category.find(condition);
@@ -74,7 +73,7 @@ const findOne = async (req, res) => {
 
 const update = async (req, res) => {
   const { id } = req.params;
-  const { title, description } = req.body;
+  const { title, description, published } = req.body;
 
   try {
     const category = await Category.findById(id).exec();
@@ -87,6 +86,7 @@ const update = async (req, res) => {
       if (title?.fi) category.title.fi = title.fi;
       if (description?.en) category.description.en = description.en;
       if (description?.fi) category.description.fi = description.fi;
+      if (published) category.published = published;
       
       const data = await category.save();
       res.json(data);

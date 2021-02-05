@@ -1,0 +1,14 @@
+[
+  {
+    "title": {
+      "en": "Cars",
+      "fi": "Autot"
+    },
+    "description": {
+      "en": "",
+      "fi": ""
+    },
+    "published": true,
+    "backgroundImageURL": "/categories/cars.png"
+  }
+]

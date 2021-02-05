@@ -33,6 +33,10 @@ const categorySchema = new Schema({
   published: {
     type: Boolean,
     default: false
+  },
+  backgroundImageURL: {
+    type: String,
+    required: false
   }
 });
 

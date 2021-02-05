@@ -26,7 +26,7 @@ const questionSchema = new Schema({
 
         if (uniqueOptions.length !== val.length) return false;
       },
-      message: 'Options must have at least 6 unique strings.'
+      message: 'Options must have at least 6 unique options.'
     }
   },
   correct: {
@@ -47,6 +47,10 @@ const questionSchema = new Schema({
   },
   category: {
     type: categorySchema,
+    required: true
+  },
+  imageURL: {
+    type: String,
     required: true
   }
 });

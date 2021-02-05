@@ -1,0 +1,362 @@
+[
+  {
+    "alias": "audi",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Audi",
+    "difficulty": 1,
+    "category": "Cars",
+    "imageURL": "/categories/cars/audi.png"
+  },
+  {
+    "alias": "honda",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Honda",
+    "difficulty": 1,
+    "category": "Cars",
+    "imageURL": "/categories/cars/honda.png"
+  },
+  {
+    "alias": "mercedes-benz",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Mercedes-Benz",
+    "difficulty": 1,
+    "category": "Cars",
+    "imageURL": "/categories/cars/mercedes-benz.png"
+  },
+  {
+    "alias": "toyota",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Toyota",
+    "difficulty": 1,
+    "category": "Cars",
+    "imageURL": "/categories/cars/toyota.png"
+  },
+  {
+    "alias": "volkswagen",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Volkswagen",
+    "difficulty": 1,
+    "category": "Cars",
+    "imageURL": "/categories/cars/volkswagen.png"
+  },
+  {
+    "alias": "bmw",
+    "options": ["", "", "", "", "", ""],
+    "correct": "BMW",
+    "difficulty": 2,
+    "category": "Cars",
+    "imageURL": "/categories/cars/bmw.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 2,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 2,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 2,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 2,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 3,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 3,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 3,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 3,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 3,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 4,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 4,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 4,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 4,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 4,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 5,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 5,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 5,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 5,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 5,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 6,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 6,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 6,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 6,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 7,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 7,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 7,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 7,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 8,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 8,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 8,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 8,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 9,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 9,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 9,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 9,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 10,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 10,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 10,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  },
+  {
+    "alias": "",
+    "options": ["", "", "", "", "", ""],
+    "correct": "",
+    "difficulty": 10,
+    "category": "Cars",
+    "imageURL": "/categories/cars/.png"
+  }
+]

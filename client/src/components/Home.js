@@ -8,6 +8,9 @@ const Home = (props) => {
   return (
     <div className="home-page">
       <h1>Welcome to Logo Quiz!</h1>
+      <div className="category" style={{ backgroundImage: "url(http://localhost:8080/categories/cars.png)"}}>
+        <h2>Autot</h2>
+      </div>
     </div>
   )
 }

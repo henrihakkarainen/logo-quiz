@@ -1,7 +1,7 @@
 [
   {
     "alias": "audi",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Alpine", "Arrinera", "Alfa Romeo", "Alta", "Austin", "Axon"],
     "correct": "Audi",
     "difficulty": 1,
     "category": "Cars",
@@ -9,7 +9,7 @@
   },
   {
     "alias": "honda",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Holden", "Infiniti", "Hyundai", "Hillman", "Lancia", "Acura"],
     "correct": "Honda",
     "difficulty": 1,
     "category": "Cars",
@@ -17,7 +17,7 @@
   },
   {
     "alias": "mercedes-benz",
-    "options": ["", "", "", "", "", ""],
+    "options": ["McLaren", "Mercedes-AMG", "Maybach", "Mazzanti", "Maxus", "Morgan"],
     "correct": "Mercedes-Benz",
     "difficulty": 1,
     "category": "Cars",
@@ -25,7 +25,7 @@
   },
   {
     "alias": "toyota",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Nissan", "Trion", "Lexus", "Mazda", "Citroën", "Renault"],
     "correct": "Toyota",
     "difficulty": 1,
     "category": "Cars",
@@ -33,7 +33,7 @@
   },
   {
     "alias": "volkswagen",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Wuling", "Wanderer", "Volvo", "Venucia", "Vauxhall", "Honda"],
     "correct": "Volkswagen",
     "difficulty": 1,
     "category": "Cars",
@@ -41,322 +41,322 @@
   },
   {
     "alias": "bmw",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Opel", "Audi", "Ford", "Volvo", "Mercedes-Benz", "Volkswagen"],
     "correct": "BMW",
     "difficulty": 2,
     "category": "Cars",
     "imageURL": "/categories/cars/bmw.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "citroen",
+    "options": ["Lexus", "Chrysler", "Chevrolet", "Chery", "Ford", "Mazda"],
+    "correct": "Citroën",
     "difficulty": 2,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/citroen.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "mazda",
+    "options": ["Toyota", "Nissan", "Daewoo", "Chery", "Renault", "Chrysler"],
+    "correct": "Mazda",
     "difficulty": 2,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/mazda.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "volvo",
+    "options": ["Volkswagen", "Citroen", "Nissan", "Ford", "Opel", "Lancia"],
+    "correct": "Volvo",
     "difficulty": 2,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/volvo.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "peugeot",
+    "options": ["Mitsubishi", "Mazda", "Holden", "Jaguar", "Renault", "Pagani"],
+    "correct": "Peugeot",
     "difficulty": 2,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/peugeot.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "opel",
+    "options": ["Oldsmobile", "Lexus", "Nissan", "Fiat", "Lancia", "Mazda"],
+    "correct": "Opel",
     "difficulty": 3,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/opel.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "skoda",
+    "options": ["Alfa Romeo", "Saab", "Suzuki", "Subaru", "Scania", "Sisu"],
+    "correct": "Škoda",
     "difficulty": 3,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/skoda.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "seat",
+    "options": ["Suzuki", "Scion", "Saab", "Škoda", "Scania", "Subaru"],
+    "correct": "Seat",
     "difficulty": 3,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/seat.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "saab",
+    "options": ["Suzuki", "Seat", "Subaru", "Ford", "Lancia", "Sisu"],
+    "correct": "Saab",
     "difficulty": 3,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/saab.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "renault",
+    "options": ["Rover", "Dacia", "Lexus", "Roewe", "Peugeot", "Fiat"],
+    "correct": "Renault",
     "difficulty": 3,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/renault.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "mitsubishi",
+    "options": ["Daihatsu", "McLaren", "Suzuki", "Kia", "Daewoo", "Land Rover"],
+    "correct": "Mitsubishi",
     "difficulty": 4,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/mitsubishi.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "huyndai",
+    "options": ["Honda", "Holden", "Haima", "Hummer", "Nissan", "Zenos"],
+    "correct": "Hyundai",
     "difficulty": 4,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/hyundai.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "ferrari",
+    "options": ["Porsche", "Lamborghini", "Bugatti", "Jaguar", "Chevrolet", "McLaren"],
+    "correct": "Ferrari",
     "difficulty": 4,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/ferrari.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "lamborghini",
+    "options": ["McLaren", "Maserati", "Rolls-Royce", "Ferrari", "Bugatti", "Porsche"],
+    "correct": "Lamborghini",
     "difficulty": 4,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/lamborghini.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "chevrolet",
+    "options": ["Cadillac", "McLaren", "Aston Martin", "Alfa Romeo", "Dodge", "Chrysler"],
+    "correct": "Chevrolet",
     "difficulty": 4,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/chevrolet.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "daihatsu",
+    "options": ["Dodge", "Daewoo", "Datsun", "Dacia", "Daimler", "De Tomaso"],
+    "correct": "Daihatsu",
     "difficulty": 5,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/daihatsu.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "jaguar",
+    "options": ["Porsche", "Ferrari", "Peugeot", "Alfa Romeo", "Bentley", "Geely"],
+    "correct": "Jaguar",
     "difficulty": 5,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/jaguar.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "suzuki",
+    "options": ["Subaru", "Saab", "Škoda", "Scion", "Scania", "Seat"],
+    "correct": "Suzuki",
     "difficulty": 5,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/suzuki.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "lexus",
+    "options": ["Lincoln", "Lotus", "Land Rover", "Lada", "Lancia", "Lucid"],
+    "correct": "Lexus",
     "difficulty": 5,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/lexus.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "subaru",
+    "options": ["Mitsubishi", "Scion", "Lancia", "Chevrolet", "Fiat", "Renault"],
+    "correct": "Subaru",
     "difficulty": 5,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/subaru.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "cadillac",
+    "options": ["Chrysler", "Chevrolet", "Chery", "Maserati", "Aston Martin", "Rolls-Royce"],
+    "correct": "Cadillac",
     "difficulty": 6,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/cadillac.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "lada",
+    "options": ["Lexus", "Lancia", "Land Rover", "Lincoln", "Lotus", "Lamborghini"],
+    "correct": "Lada",
     "difficulty": 6,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/lada.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "mini",
+    "options": ["Bentley", "Chrysler", "Aston Martin", "Genesis", "Rolls-Royce", "Land Rover"],
+    "correct": "Mini",
     "difficulty": 6,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/mini.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "sisu",
+    "options": ["Scania", "Saab", "Suzuki", "Subaru", "Geely", "RUF"],
+    "correct": "Sisu",
     "difficulty": 6,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/sisu.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "astonmartin",
+    "options": ["Chrysler", "Bentley", "Alpine", "Jaguar", "Infiniti", "Mini"],
+    "correct": "Aston Martin",
     "difficulty": 7,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/astonmartin.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "rolls-royce",
+    "options": ["Rover", "Rossion", "Renault", "Roewe", "Riley", "Range Rover"],
+    "correct": "Rolls-Royce",
     "difficulty": 7,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/rolls-royce.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "tesla",
+    "options": ["Tata", "Troller", "Trion", "Tatra", "Tucker", "TVR"],
+    "correct": "Tesla",
     "difficulty": 7,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/tesla.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "acura",
+    "options": ["Alfa Romeo", "Hyundai", "Alpina", "Abarth", "Apollo", "Austin"],
+    "correct": "Acura",
     "difficulty": 7,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/acura.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "bugatti",
+    "options": ["Buick", "Pagani", "Panoz", "Dodge", "Cadillac", "Bentley"],
+    "correct": "Bugatti",
     "difficulty": 8,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/bugatti.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "maserati",
+    "options": ["Bugatti", "Ferrari", "McLaren", "Trion", "Porsche", "Pontiac"],
+    "correct": "Maserati",
     "difficulty": 8,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/maserati.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "daewoo",
+    "options": ["Dacia", "Datsun", "Dodge", "Daihatsu", "Donkervoort", "Acura"],
+    "correct": "Daewoo",
     "difficulty": 8,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/daewoo.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "bentley",
+    "options": ["Bugatti", "Buick", "Brilliance", "Baojun", "Bristol", "Bertone"],
+    "correct": "Bentley",
     "difficulty": 8,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/bentley.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "abarth",
+    "options": ["Alpina", "Apollo", "Shelby", "McLaren", "Cadillac", "Maserati"],
+    "correct": "Abarth",
     "difficulty": 9,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/abarth.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "pontiac",
+    "options": ["Porsche", "Pagani", "Panoz", "Vauxhall", "Abarth", "Infiniti"],
+    "correct": "Pontiac",
     "difficulty": 9,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/pontiac.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "vauxhall",
+    "options": ["Venuxia", "Venturi", "VLF", "Vector", "Vencer", "Vandenbrink"],
+    "correct": "Vauxhall",
     "difficulty": 9,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/vauxhall.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "infiniti",
+    "options": ["Isuzu", "Iveco", "Daewoo", "Chery", "Pontiac", "Genesis"],
+    "correct": "Infiniti",
     "difficulty": 9,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/infiniti.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "buick",
+    "options": ["Genesis", "Chrysler", "Saturn", "Mazzanti", "Shelby", "Intermeccanica"],
+    "correct": "Buick",
     "difficulty": 10,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/buick.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "koenigsegg",
+    "options": ["Mazzanti", "Karma", "Trion", "Maserati", "Pagani", "Arrinera"],
+    "correct": "Koenigsegg",
     "difficulty": 10,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/koenigsegg.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "panoz",
+    "options": ["Mazzanti", "Arrinera", "Pagani", "Bugatti", "Abarth", "Pontiac"],
+    "correct": "Panoz",
     "difficulty": 10,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/panoz.png"
   },
   {
-    "alias": "",
-    "options": ["", "", "", "", "", ""],
-    "correct": "",
+    "alias": "saturn",
+    "options": ["Scion", "Roewe", "Trion", "Yulon", "Zenos", "Kenworth"],
+    "correct": "Saturn",
     "difficulty": 10,
     "category": "Cars",
-    "imageURL": "/categories/cars/.png"
+    "imageURL": "/categories/cars/saturn.png"
   }
 ]

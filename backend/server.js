@@ -1,5 +1,8 @@
 const express = require('express');
+const helmet = require('helmet');
 const app = express();
+
+app.use(helmet());
 
 // Middleware for parsing requests
 app.use(express.json());
@@ -11,7 +14,8 @@ const db = require('./models');
 db.mongoose
   .connect(db.url, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true
   })
   .then(() => {
     console.log('Connected to Mongo database!');
@@ -20,6 +24,18 @@ db.mongoose
     console.log('Cannot connect to Mongo database!', err);
     process.exit();
   });
+
+
+const { createCategoryData, createQuestionData } = require('./setup/createdata');
+createCategoryData()
+  .then((msg) => {
+  console.log(msg)
+  })
+  .then(createQuestionData)
+  .then((msg) => {
+    console.log(msg);
+  });
+
 
 require('./router.js')(app);
 

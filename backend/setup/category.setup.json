@@ -5,8 +5,8 @@
       "fi": "Autot"
     },
     "description": {
-      "en": "",
-      "fi": ""
+      "en": "Check how well you are able to recognize different car manufacturers and brands by their logos.",
+      "fi": "Testaa kuinka hyvin tunnistat autovalmistajat ja -merkit pelkän logon perusteella."
     },
     "published": true,
     "backgroundImageURL": "/categories/cars.png"

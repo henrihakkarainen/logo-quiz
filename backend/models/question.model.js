@@ -8,7 +8,8 @@ const questionSchema = new Schema({
     type: String,
     required: true,
     minlength: 3,
-    maxlength: 40
+    maxlength: 40,
+    unique: true
   },
   options: {
     type: [String],
@@ -45,8 +46,8 @@ const questionSchema = new Schema({
       message: 'Difficulty must be between 1-10.'
     }
   },
-  category: {
-    type: categorySchema,
+  categoryID: {
+    type: String,
     required: true
   },
   imageURL: {

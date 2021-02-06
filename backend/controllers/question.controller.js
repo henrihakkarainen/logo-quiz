@@ -4,7 +4,7 @@ const Category = db.categories;
 
 // Create a new question
 const create = async (req, res) => {
-  const { alias, options, correct, difficulty } = req.body;
+  const { alias, options, correct, difficulty, imageURL } = req.body;
   const categoryTitle = req.body.category;
   if (!alias || !options || !correct || !difficulty || !categoryTitle) {
     return res.status(400).json({
@@ -39,7 +39,8 @@ const create = async (req, res) => {
     options,
     correct,
     difficulty,
-    category
+    categoryID: category._id,
+    imageURL
   });
 
   try {
@@ -146,7 +147,9 @@ const remove = async (req, res) => {
         message: `Cannot delete Question with id: ${id} because that was not found`
       })
     } else {
-      res.status(204).json();
+      res.json({
+        message: `Question with id: ${question._id} was deleted`
+      });
     }
   } catch (err) {
     res.status(500).json({

@@ -1,6 +1,7 @@
 const db = require('../models');
 
 const Category = db.categories;
+const Question = db.questions;
 
 const create = async (req, res) => {
   const { title, description } = req.body;
@@ -108,7 +109,11 @@ const remove = async (req, res) => {
         message: `Cannot delete Category with id: ${id} because that was not found`
       });
     } else {
-      res.status(204).json();
+      const data = await Question.deleteMany({ categoryID : category._id });
+      res.json({
+        message: `Category with id: ${category._id} and ` +
+                 `${data.deletedCount} questions linked to it were deleted`
+      });
     }
   } catch (err) {
     res.status(500).json({
@@ -119,13 +124,15 @@ const remove = async (req, res) => {
 
 const removeAll = async (req, res) => {
   try {
-    const data = await Category.deleteMany({});
+    const catData = await Category.deleteMany({});
+    const queData = await Question.deleteMany({});
     res.json({
-      message: `${data.deletedCount} categories were deleted.`
+      message: `${catData.deletedCount} categories and ` +
+               `${queData.deletedCount} questions were deleted`
     });
   } catch (err) {
     res.status(500).json({
-      message: err.message || 'Deleting categories did not succeed.'
+      message: err.message || 'Deleting categories did not succeed'
     });
   }
 }

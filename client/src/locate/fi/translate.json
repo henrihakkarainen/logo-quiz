@@ -6,6 +6,8 @@
     "languages": {
       "en": "Englanti",
       "fi": "Suomi"
-    }
+    },
+    "selectCategory": "Valitse kategoria",
+    "toBeAdded": "Lisää kategorioita tulossa (toivottavasti) pian..."
   }
 }

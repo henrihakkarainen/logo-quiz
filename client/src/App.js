@@ -6,6 +6,7 @@ import './App.css';
 import LanguageSelection from './components/LanguageSelection';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
+import Games from './components/Games';
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
           <Navigation lang={language} onChangeLanguage={onChangeLanguage} />
         </div>
         <Route path="/" exact component={Home} />
+        <Route path="/games" component={Games} />
       </Router>
     )
   } else {

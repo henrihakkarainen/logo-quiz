@@ -1,24 +1,3 @@
 .home-page {
   margin: 40px 15% 0 15%;
 }
-
-h1 {
-  text-align: center;
-}
-
-.category {
-  display: flex;
-  border: 2px double white;
-  border-style: double;
-  width: 300px;
-  margin: auto;
-  border-radius: 10px;
-  height: 150px;
-  align-items: center;
-  justify-content: left;
-  padding-left: 15px;
-  font-style: italic;
-  font-size: 28px;
-  background-size: cover;
-  color: white;
-}

@@ -58,28 +58,37 @@ const findAll = async (req, res) => {
   const { category, difficulty } = req.query;
   const query = {
     $or : [
-      { 'category.title.en' : { $regex: new RegExp(`^${category}$`), $options: 'i' } },
-      { 'category.title.fi' : { $regex: new RegExp(`^${category}$`), $options: 'i' } }
+      { 'title.en' : { $regex: new RegExp(`^${category}$`), $options: 'i' } },
+      { 'title.fi' : { $regex: new RegExp(`^${category}$`), $options: 'i' } }
     ]
   }
   let condition = category ? query : {};
 
-  if (category && difficulty) {
-    try {
-      condition = {
-        ...query,
-        difficulty: parseInt(difficulty)
-      };
-    } catch (err) {
-      return res.status(400).json({
-        message: err.message || 'Query parameter difficulty must be an integer'
-      });
-    }
-  }
-
   try {
-    const data = await Question.find(condition).exec();
-    res.json(data);
+    if (category) {
+      const categoryData = await Category.findOne(condition).exec();
+      condition = categoryData ? { categoryID: categoryData._id } : { categoryID: 'unknown' };
+      if (difficulty) {
+        try {
+          condition = {
+            ...condition,
+            difficulty: parseInt(difficulty)
+          }
+          const data = await Question.find(condition).exec();
+          res.json(data);
+        } catch (err) {
+          return res.status(400).json({
+            message: 'Query parameter difficulty must be an integer'
+          });
+        }        
+      } else {
+        const data = await Question.find(condition).exec();
+        res.json(data);
+      }
+    } else {
+      const data = await Question.find({}).exec();
+      res.json(data);
+    }
   } catch (err) {
     res.status(500).json({
       message: err.message || 'Server failed to retrieve questions'

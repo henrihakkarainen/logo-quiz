@@ -11,10 +11,19 @@ const create = async (req, res) => {
     });
   }
 
-  const existsTitle = await Category.exists({ title });
+  const query = {
+    $or : [
+      { 'title.en' : { $regex: new RegExp(`^${title.en}$`), $options: 'i' } },
+      { 'title.fi' : { $regex: new RegExp(`^${title.en}$`), $options: 'i' } },
+      { 'title.en' : { $regex: new RegExp(`^${title.fi}$`), $options: 'i' } },
+      { 'title.fi' : { $regex: new RegExp(`^${title.fi}$`), $options: 'i' } }
+    ]
+  }
+
+  const existsTitle = await Category.exists(query);
   if (existsTitle) {
     return res.status(409).json({
-      message: `Category with title "${title}" already exists in the database`
+      message: `Category with title "${title.en}" or "${title.fi}" already exists in the database`
     });
   }
 
@@ -70,6 +79,18 @@ const findOne = async (req, res) => {
       message: err.message | `Error when trying to retrieve Category with id: ${id}`
     });
   }  
+}
+
+const findPublished = async (req, res) => {
+  try {
+    const data = await Category.find({ published: true }).exec();
+    console.log(data)
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({
+      message: err.message || 'Error when trying to retrieve published categories'
+    });
+  }
 }
 
 const update = async (req, res) => {
@@ -141,6 +162,7 @@ module.exports = {
   create,
   findAll,
   findOne,
+  findPublished,
   update,
   remove,
   removeAll

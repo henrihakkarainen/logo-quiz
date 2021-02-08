@@ -1,6 +1,6 @@
 const db = require('../models');
-const Question = db.questions;
-const Category = db.categories;
+const Question = db.question;
+const Category = db.category;
 
 // Create a new question
 const create = async (req, res) => {
@@ -8,7 +8,7 @@ const create = async (req, res) => {
   const categoryTitle = req.body.category;
   if (!alias || !options || !correct || !difficulty || !categoryTitle) {
     return res.status(400).json({
-      message: 'Body must have the following: alias, options, correct, difficulty, category'
+      message: 'Following fields are required: alias, options, correct, difficulty, category'
     });
   }
 

@@ -1,0 +1,11 @@
+{
+  "session": {
+    "secret": "SECRET"
+  },
+
+  "admin": {
+    "name": "ADMIN_NAME",
+    "email": "ADMIN_EMAIL",
+    "password": "ADMIN_PASS"
+  }
+}

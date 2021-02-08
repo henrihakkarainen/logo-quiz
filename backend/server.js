@@ -1,9 +1,13 @@
+require('dotenv').config();
 const express = require('express');
+// const path = require('path');
 const helmet = require('helmet');
-// const cors = require('cors');
+const cors = require('cors');
+// const config = require('config');
 const app = express();
 
 app.use(helmet());
+app.use(cors());
 
 // Middleware for parsing requests
 app.use(express.json());

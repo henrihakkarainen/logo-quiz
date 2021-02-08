@@ -3,8 +3,8 @@ const path = require('path');
 
 const db = require('../models');
 
-const Category = db.categories;
-const Question = db.questions;
+const Category = db.category;
+const Question = db.question;
 
 const createCategoryData = async () => {
   const rawData = fs.readFileSync(

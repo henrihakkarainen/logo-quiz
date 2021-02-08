@@ -1,13 +1,14 @@
 const db = require('../models');
 
-const Category = db.categories;
-const Question = db.questions;
+const Category = db.category;
+const Question = db.question;
 
 const create = async (req, res) => {
   const { title, description } = req.body;
-  if (!title || !description) {
+  if (!title?.en || !title?.fi || !description?.en || !description?.fi) {
     return res.status(400).json({
-      message: 'Body must have the following: title, description'
+      message: 'Following fields are required: title.en, title.fi, ' +
+               'description.en, description.fi'
     });
   }
 
@@ -34,7 +35,7 @@ const create = async (req, res) => {
 
   try {
     const data = await category.save();
-    res.json(data);
+    res.status(201).json(data);
   } catch (err) {
     res.status(500).json({
       message: err.message || 'Adding the category failed for unknown reason'

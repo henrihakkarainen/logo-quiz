@@ -4,11 +4,15 @@ const router = express.Router();
 const QuestionController = require('../controllers/question.controller');
 
 router
-  .post('/', QuestionController.create)
-  .get('/', QuestionController.findAll)
-  .get('/:id', QuestionController.findOne)
-  .put('/:id', QuestionController.update)
-  .delete('/', QuestionController.removeAll)
-  .delete('/:id', QuestionController.remove)
+  .route('/')
+  .post(QuestionController.create)
+  .get(QuestionController.findAll)
+  .delete(QuestionController.removeAll)
+
+router
+  .route('/:id([a-f0-9]{24})')
+  .get(QuestionController.findOne)
+  .put(QuestionController.update)  
+  .delete(QuestionController.remove)
 
 module.exports = router;

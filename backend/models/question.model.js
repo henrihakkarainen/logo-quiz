@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const categorySchema = require('./category.model').schema;
-
 const questionSchema = new Schema({
   alias: {
     type: String,

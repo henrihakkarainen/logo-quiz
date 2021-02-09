@@ -3,7 +3,7 @@ const express = require('express');
 // const path = require('path');
 const helmet = require('helmet');
 const cors = require('cors');
-// const config = require('config');
+const config = require('config');
 const app = express();
 
 app.use(helmet());
@@ -30,6 +30,8 @@ db.mongoose
     process.exit();
   });
 
+const setupAdmin = require('./setup/createusers');
+setupAdmin(config.get('admin'));
 
 const { createCategoryData, createQuestionData } = require('./setup/createdata');
 createCategoryData()

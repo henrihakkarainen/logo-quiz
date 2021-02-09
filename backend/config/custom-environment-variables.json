@@ -4,7 +4,7 @@
   },
 
   "admin": {
-    "name": "ADMIN_NAME",
+    "username": "ADMIN_NAME",
     "email": "ADMIN_EMAIL",
     "password": "ADMIN_PASS"
   }

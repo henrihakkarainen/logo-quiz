@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 
 const config = require('../config/db.config');
 const db = require('../models');
+const SECRET = require('config').get('session').secret;
 const User = db.user;
 
 const register = async (req, res) => {
@@ -28,7 +29,38 @@ const register = async (req, res) => {
 }
 
 const login = async (req, res) => {
+  const { username, password } = req.body;
+  if (!username || !password) {
+    return res.status(400).json({
+      message: 'Username and password are required for login'
+    });
+  }
 
+  try {
+    const user = await User.findOne({ username }).exec();
+    if (!user) {
+      return res.status(404).json({
+        message: `User: ${username} not found`
+      });
+    }
+    const result = await bcrypt.compare(password, user.password);
+    if (result) {
+      const token = await jwt.sign({ id: user._id }, SECRET, { algorithm: 'HS256' })
+      return res.status(200).json({
+        token,
+        role: user.role,
+        id: user._id
+      });
+    } else {
+      return res.status(401).json({
+        message: 'Invalid credentials'
+      });
+    }
+  } catch (err) {
+    return res.status(401).json({
+      message: err.message || 'Login failed'
+    });
+  }
 }
 
 module.exports = {

@@ -1,9 +1,9 @@
 const db = require('../models');
-const User = db.users;
+const User = db.user;
 
 const checkDuplicateUsernameOrEmail = async (req, res, next) => {
   try {
-    const userByUsername = await User.findOne({ username: req.body.name }).exec();
+    const userByUsername = await User.findOne({ username: req.body.username }).exec();
     if (userByUsername) {
       return res.status(400).json({
         message: 'Error: username is already in use'

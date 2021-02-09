@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
-const config = require('../config/db.config');
 const db = require('../models');
 const User = db.user;
+const SECRET = require('config').get('session').secret;
 
 const verifyToken = async (req, res, next) => {
   const authHeader = req.headers.authorization;
@@ -14,7 +14,7 @@ const verifyToken = async (req, res, next) => {
     }
 
     try {
-      const decoded = jwt.verify(token, config.secret);
+      const decoded = jwt.verify(token, SECRET);
       req.user = { id: decoded.id };
       next();
     } catch (err) {

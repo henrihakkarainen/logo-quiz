@@ -36,7 +36,16 @@ const userSchema = new Schema({
     trim: true,
     lowercase: true,
     enum: ['admin', 'normal'],
-    default: ['normal']
+    default: 'normal'
+  }
+});
+
+userSchema.set('toJSON', {
+  virtuals: true,
+  transform: (doc, ret) => {
+    delete ret.password;
+    delete ret._id;
+    delete ret.__v;
   }
 });
 

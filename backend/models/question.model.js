@@ -54,5 +54,13 @@ const questionSchema = new Schema({
   }
 });
 
+questionSchema.set('toJSON', {
+  virtuals: true,
+  transform: (doc, ret) => {
+    delete ret._id;
+    delete ret.__v;
+  }
+});
+
 const Question = mongoose.model('Question', questionSchema);
 module.exports = Question;

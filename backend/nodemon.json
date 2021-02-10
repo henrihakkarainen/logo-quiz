@@ -1,0 +1,12 @@
+{
+  "restartable": "rs",
+  "ignore": ["public", "node_modules"],
+  "legacyWatch": true,
+  "pollingInterval": 1000,
+  "verbose": true,
+  "delay": "3000",
+  "env": {
+      "NODE_ENV": "development",
+      "DEBUG": "logo-quiz:*"
+  }
+}

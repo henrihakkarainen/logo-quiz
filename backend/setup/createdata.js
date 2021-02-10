@@ -6,44 +6,32 @@ const db = require('../models');
 const Category = db.category;
 const Question = db.question;
 
-const createCategoryData = async () => {
-  const rawData = fs.readFileSync(
+const createGameData = async () => {
+  const rawCategoryData = fs.readFileSync(
     path.resolve(__dirname, './category.setup.json')
   );
-  const data = JSON.parse(rawData);
-
-  try {
-    await Category.create(data);
-
-    return 'Category inserted into database';
-  } catch (err) {
-    return 'Category already exists in the database';
-  }
-}
-
-const createQuestionData = async () => {
-  const rawData = fs.readFileSync(
+  const rawQuestionData = fs.readFileSync(
     path.resolve(__dirname, './questions.setup.json')
   );
-  const data = JSON.parse(rawData);
+  const categoryData = JSON.parse(rawCategoryData);
+  const questionData = JSON.parse(rawQuestionData);
 
   try {
-    for (const question of data) {
+    await Category.create(categoryData);
+
+    for (const question of questionData) {
       const category = await Category.findOne({
         $or: [ { 'title.en': question.category }, { 'title.fi': question.category } ]
       }).exec();
       question.categoryID = category._id;
     }
     
-    await Question.create(data);
+    await Question.create(questionData);
 
-    return 'Questions inserted into database.';
+    return 'Category and question data inserted into database';
   } catch (err) {
-    return 'Questions already exist in the database.';
+    return err.message;
   }
 }
 
-module.exports = {
-  createCategoryData,
-  createQuestionData
-};
+module.exports = createGameData;

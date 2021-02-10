@@ -7,5 +7,9 @@
     "username": "ADMIN_NAME",
     "email": "ADMIN_EMAIL",
     "password": "ADMIN_PASS"
+  },
+
+  "mongo": {
+    "url": "MONGODB_URL"
   }
 }

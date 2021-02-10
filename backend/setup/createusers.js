@@ -4,15 +4,16 @@ const User = db.user;
 const createUser = async (userConfig) => {
   const admin = await User.findOne({ role: 'admin' }).exec();
 
-  if (admin) return;
+  if (admin)
+    return 'Admin not created: at least one admin user already found in database.';
 
   const user = new User(userConfig);
   user.role = 'admin';
   try {
     await user.save();
-    return;
+    return 'Admin user successfully created';
   } catch (err) {
-    console.log('Admin user setup failed');
+    return 'Admin user setup failed';
   }
 }
 

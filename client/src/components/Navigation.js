@@ -14,7 +14,7 @@ const Navigation = (props) => {
         <li><Link to="/">{t('home')}</Link></li>
         <li><Link to="/games">{t('games')}</Link></li>
         <li className="nav-right">
-          <Link to="/login">{t('login')}</Link>
+          <Link to="#" onClick={props.toggle}>{t('login')}</Link>
         </li>
         <li className="nav-right">
           <div className="dropdown-selection">

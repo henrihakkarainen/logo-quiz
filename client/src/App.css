@@ -6,3 +6,7 @@ body {
 h1 {
   text-align: center;
 }
+
+.loginOverlay {
+  background: rgba(36, 123, 160, 0.7);
+}

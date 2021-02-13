@@ -3,10 +3,12 @@
     "home": "Home",
     "login": "Login",
     "games": "Games",
+    "highscores": "High scores",
     "languages": {
       "en": "English",
       "fi": "Finnish"
     },
+    "selectLanguage": "Select language",
     "selectCategory": "Select a category",
     "toBeAdded": "More categories (hopefully) coming soon...",
     "loginBox": "Login"

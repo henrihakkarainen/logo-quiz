@@ -1,77 +1,22 @@
-nav {
-  margin: 0 15vw;
+.navbar-nav .btn {
+  padding: 6px 8px;
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  border-radius: 0 0 10px 10px;
+.dropdown-menu {
+  min-width: 9.5rem !important;
+  max-width: 9.5rem;
+  text-align: right !important;
 }
 
-nav ul li {
-  float: left;
+.dropdown-menu .dropdown-header {
+  text-align: left !important;
 }
 
-nav ul li a {
-  display: block;
-  color: white;
-  font-size: 18px;
-  text-align: center;
-  padding: 15px 25px;
-  text-decoration: none;
+.dropdown-toggle span, .dropdown-menu a span {
+  display: 'inline-block';
+  text-align: right;
 }
 
-nav ul li a:hover, .dropdown-selection:hover, .dropdown-selection button:hover {
-  background-color: black;
-}
-
-.nav-right {
-  float: right;
-  min-width: 120px;
-}
-
-.dropdown-selection {
-  overflow: hidden;
-}
-
-.dropdown-selection button {
-  border: none;
-  outline: none;
-  color: white;
-  display: flex;
-  align-items: center;
-  background-color: inherit;
-  padding: 15px 25px;
-  font-size: 18px;
-  width: 130px;
-  margin: 0;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: inherit;
-  z-index: 1;
-}
-
-.dropdown-content button {
-  float: none;
-  display: flex;
-  align-items: center;
-  width: 130px;
-  background-color: #333;
-  cursor: pointer;
-}
-
-.dropdown-content button img, .dropdown-selection button img {
-  width: 35%;
-  padding-right: 8px;
-  margin-left: -10px;
-}
-
-.dropdown-selection:hover .dropdown-content {
-  display: block;
+.dropdown-toggle span img, .dropdown-menu a span img {
+  margin: -2px 0 0 2px;
 }

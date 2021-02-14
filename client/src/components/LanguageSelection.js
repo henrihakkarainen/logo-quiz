@@ -1,5 +1,5 @@
-import uk from '../images/icons/uk.png';
-import fin from '../images/icons/fin.png';
+import uk from '../images/icons/uk_large.png';
+import fin from '../images/icons/fin_large.png';
 import '../styles/LanguageSelection.css';
 
 const LanguageSelection = (props) => {
@@ -10,14 +10,18 @@ const LanguageSelection = (props) => {
       <h3>Please, select your language</h3>
       <ul>
         <li>
-          <button className="language-button" value="en" onClick={props.onChangeLanguage}>
+          <button className="language-button"
+                  value="en"
+                  onClick={(e) => props.onChangeLanguage(e.target.value)}>
             <img className="icon" src={uk} alt="UK"></img>
             English
           </button>
         </li>
         <li>
-          <button className="language-button" value="fi" onClick={props.onChangeLanguage}>
-            <img className="icon" src={fin} alt="FI"></img>
+          <button className="language-button"
+                  value="fi"
+                  onClick={(e) => props.onChangeLanguage(e.target.value)}>
+            <img className="icon" src={fin} alt="FIN"></img>
             Suomi
           </button>
         </li>

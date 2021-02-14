@@ -1,7 +1,7 @@
 {
   "translations": {
     "home": "Home",
-    "login": "Login",
+    "loginBtn": "Login",
     "games": "Games",
     "highscores": "High scores",
     "languages": {
@@ -11,6 +11,17 @@
     "selectLanguage": "Select language",
     "selectCategory": "Select a category",
     "toBeAdded": "More categories (hopefully) coming soon...",
-    "loginBox": "Login"
+    "loginBox": "Sign In",
+    "login": {
+      "enterUsername": "Enter username",
+      "enterPassword": "Enter password",
+      "viewPassword": "View password",
+      "hidePassword": "Hide password",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account yet?",
+      "signUp": "Sign Up!"
+    },
+    "username": "Username",
+    "password": "Password"
   }
 }

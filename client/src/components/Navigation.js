@@ -55,7 +55,7 @@ const Navigation = (props) => {
                 </Dropdown.Item>           
             </DropdownButton>
           </Dropdown>
-        <Button variant="outline-dark" onClick={props.openLoginForm}>{t('login')}</Button>
+        <Button variant="outline-dark" onClick={props.openLoginForm}>{t('loginBtn')}</Button>
       </Navbar.Collapse>
     </Navbar>
   )

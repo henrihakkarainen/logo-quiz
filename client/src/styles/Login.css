@@ -1,0 +1,11 @@
+.modal-content {
+  padding: 10px;
+}
+
+.form-link:hover {
+  cursor: pointer;
+}
+
+.form-password:hover {
+  cursor: pointer;
+}

@@ -11,18 +11,21 @@ const Games = (props) => {
 
   useEffect(() => {
     axios.get('http://localhost:8080/api/categories/published')
-      .then((data) => {
-        console.log(data)
-        setCategoryList(data);
+      .then((res) => {
+        console.log(res.data)
+        setCategoryList(res.data);
       })
   }, [])
 
   return (
     <div className="categories">
       <h1>{t('selectCategory')}</h1>
-      <div>
-        <Category />
-      </div>
+        {categoryList.map(item =>
+          <Category key={item.id}
+                    title={item.title}
+                    description={item.description}
+                    bgUrl={item.backgroundImageURL} />
+        )}
       <br />
       <p>{t('toBeAdded')}</p>
     </div>

@@ -1,7 +1,7 @@
 {
   "translations": {
     "home": "Etusivu",
-    "login": "Kirjaudu",
+    "loginBtn": "Kirjaudu",
     "games": "Kaikki pelit",
     "highscores": "TOP-listat",
     "languages": {
@@ -11,6 +11,17 @@
     "selectLanguage": "Valitse kieli",
     "selectCategory": "Valitse kategoria",
     "toBeAdded": "Lisää kategorioita tulossa (toivottavasti) pian...",
-    "loginBox": "Kirjaudu sisään"
+    "loginBox": "Kirjaudu sisään",
+    "login": {
+      "enterUsername": "Syötä käyttäjätunnus",
+      "enterPassword": "Syötä salasana",
+      "viewPassword": "Näytä salasana",
+      "hidePassword": "Piilota salasana",
+      "forgotPassword": "Unohtuiko salasana?",
+      "noAccount": "Eikö sinulla ole vielä tunnuksia?",
+      "signUp": "Rekisteröidy nyt!"
+    },
+    "username": "Käyttäjätunnus",
+    "password": "Salasana"
   }
 }

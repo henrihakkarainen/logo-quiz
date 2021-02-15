@@ -22,6 +22,17 @@
       "signUp": "Rekisteröidy nyt!"
     },
     "username": "Käyttäjätunnus",
-    "password": "Salasana"
+    "password": "Salasana",
+    "signup": {
+      "title": "Rekisteröidy käyttäjäksi",
+      "haveAccount": "Oletko jo rekisteröitynyt käyttäjäksi?",
+      "login": "Kirjaudu sisään täältä",
+      "createAccount": "Luo käyttäjätunnus",
+      "usernameRequired": "Syötä käyttäjätunnus",
+      "emailRequired": "Syötä sähköpostiosoite",
+      "emailValidity": "Sähköpostiosoite on virheellinen",
+      "passwordRequired": "Syötä salasana",
+      "passwordsNoMatch": "Salasanat eivät täsmää"
+    }
   }
 }

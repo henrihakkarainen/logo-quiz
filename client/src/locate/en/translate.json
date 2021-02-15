@@ -22,6 +22,17 @@
       "signUp": "Sign Up!"
     },
     "username": "Username",
-    "password": "Password"
+    "password": "Password",
+    "signup": {
+      "title": "Sign Up",
+      "haveAccount": "Do you have an account?",
+      "login": "Click here to Login",
+      "createAccount": "Create account",
+      "usernameRequired": "Enter your username",
+      "emailRequired": "Enter your email address",
+      "emailValidity": "Enter a valid email address",
+      "passwordRequired": "Enter your password",
+      "passwordsNoMatch": "Passwords must match"
+    }
   }
 }

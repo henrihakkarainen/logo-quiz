@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Grid from '@material-ui/core/Grid';
@@ -12,26 +12,16 @@ import PersonIcon from '@material-ui/icons/Person';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 
-import '../styles/Login.css';
-
 const LoginForm = (props) => {
   const [ t, i18n ] = useTranslation();
-  const [ mode, setMode ] = useState('login');
   const [ viewPassword, setViewPassword ] = useState(false);
 
   const togglePasswordVisibility = () => {
     setViewPassword(!viewPassword);
   }
 
-  const renderRegister = () => {
-    return (
-      <div>register</div>
-    );
-  }
-
-  const renderLogin = () => {
-    return (
-      <Form className="align-items-center">
+  return (
+    <Form className="align-items-center">
         <Form.Group>
           <Form.Label>{t('username')}</Form.Label>
           <InputGroup>
@@ -65,30 +55,21 @@ const LoginForm = (props) => {
         </Button>
         <Grid container>
           <Grid item xs>
-            <Link className="form-link" variant="body2">{t('login.forgotPassword')}</Link>
+            <Typography variant="body2">
+              <Link className="form-link" variant="body2">{t('login.forgotPassword')}</Link>
+            </Typography>
           </Grid>
           <Grid item>
-            <Typography variant="body2">{t('login.noAccount')}</Typography>
-            <Link className="form-link" variant="body2">{t('login.signUp')}</Link>
+            <Typography variant="body2">
+              {t('login.noAccount')}
+              <br />
+              <Link className="form-link" variant="body2" onClick={() => props.setMode('register')}>
+                {t('login.signUp')}
+              </Link>
+            </Typography>
           </Grid>
         </Grid>
       </Form>
-    );
-  }
-
-  return (
-    <Modal
-      centered
-      show={props.show}
-      onHide={props.onHide}
-    >
-      <Modal.Header closeButton>
-        <Modal.Title>{ mode === 'login' ? t('loginBox') : 'Register' }</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        { mode === 'login' ? renderLogin() : renderRegister() }
-      </Modal.Body>
-    </Modal>
   );
 }
 

@@ -1,9 +1,9 @@
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 import '../styles/Home.css';
 
 const Home = (props) => {
-  const [ t, i18n ] = useTranslation();
+  // const [ t, i18n ] = useTranslation();
 
   return (
     <div className="home-page">

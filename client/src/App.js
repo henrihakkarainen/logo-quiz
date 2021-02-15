@@ -9,7 +9,7 @@ import LanguageSelection from './components/LanguageSelection';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import Games from './components/Games';
-import Login from './components/LoginForm';
+import Modal from './components/ModalForm';
 
 const App = () => {
   const [ language, setLanguage ] = useState(localStorage.getItem('language'));
@@ -27,6 +27,7 @@ const App = () => {
 
   if (language === 'fi' || language === 'en') {
     return (
+      <>
       <Router>
         <Container>
           <Navigation lang={language}
@@ -35,9 +36,10 @@ const App = () => {
                       router={Router.router} />
           <Route path="/" exact component={Home} />
           <Route path="/games" component={Games} />
-          <Login show={showLogin} onHide={onCloseLogin} />
         </Container>
       </Router>
+      <Modal show={showLogin} onHide={onCloseLogin} />
+      </>
     )
   } else {
     return (

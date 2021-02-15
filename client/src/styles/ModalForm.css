@@ -1,0 +1,20 @@
+.modal-content {
+  padding: 10px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-link:hover {
+  cursor: pointer;
+}
+
+.form-password:hover {
+  cursor: pointer;
+}
+
+.MuiInputLabel-outlined {
+  color: black !important;
+  font-weight: bold !important;
+}

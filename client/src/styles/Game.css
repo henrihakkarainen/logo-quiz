@@ -13,9 +13,41 @@
   height: 120px !important;
 }
 
+.start-screen {
+  text-align: center;
+  padding: 0 10vw;
+}
+
+.start-screen h4 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.start-screen p {
+  padding: 10px 0;
+}
+
 @media (max-width: 433px) {
+  .game {
+    margin: 15px 0;
+    padding: 20px 15px;
+  }
+
   .game .MuiCircularProgress-root {
     width: 40px !important;
     height: 40px !important;
+  }
+
+  .start-screen {
+    padding: 0;
+  }
+
+  .start-screen h4 {
+    margin-bottom: 5px;
+  }
+
+  .start-screen p {
+    font-size: 80%;
+    text-align: left;
   }
 }

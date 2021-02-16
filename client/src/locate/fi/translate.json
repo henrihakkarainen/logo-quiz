@@ -46,6 +46,11 @@
       "title": "Salasanan palauttaminen",
       "info": "Valitettavasti salasanan automaattinen palauttaminen on toistaiseksi poissa käytöstä. Ota yhteyttä järjestelmänvalvojaan salasanan palauttamiseksi.",
       "back": "Takaisin sisäänkirjautumiseen"
+    },
+    "game": {
+      "description": "Tietovisassa näet logon ja neljä vastausvaihtoehtoa, joista tehtävänäsi on valita oikea. Käytössäsi on kaksi oljenkortta, joista kumpaakin voit käyttää yhden kerran pelin aikana. Sinulla on 15 sekuntia aikaa vastata kuhunkin kysymykseen.",
+      "goodLuck": "Onnea peliin!",
+      "start": "Aloita peli"
     }
   }
 }

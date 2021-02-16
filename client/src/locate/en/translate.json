@@ -46,6 +46,11 @@
       "title": "Password assistance",
       "info": "Unfortunately the automatic password recovery feature is not currently available. Please contact an administrator to reset your password.",
       "back": "Back to login"
+    },
+    "game": {
+      "description": "The quiz will display a logo with four different alternatives and your task is to choose the correct one for each question. You have two lifelines, each of them can be used once. You have 15 seconds to answer a single question.",
+      "goodLuck": "Good luck!",
+      "start": "Start game"
     }
   }
 }

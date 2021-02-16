@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import Category from './Category';
+import Typography from '@material-ui/core/Typography';
 
 import '../styles/Games.css';
 
@@ -19,13 +20,15 @@ const Games = (props) => {
 
   return (
     <div className="categories">
-      <h1>{t('selectCategory')}</h1>
-        {categoryList.map(item =>
-          <Category key={item.id}
-                    title={item.title}
-                    description={item.description}
-                    bgUrl={item.backgroundImageURL} />
-        )}
+      <Typography variant="h4">
+        {t('selectCategory')}
+      </Typography>
+      {categoryList.map(item =>
+        <Category key={item.id}
+                  title={item.title}
+                  description={item.description}
+                  bgUrl={item.backgroundImageURL} />
+      )}
       <br />
       <p>{t('toBeAdded')}</p>
     </div>

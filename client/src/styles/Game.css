@@ -1,0 +1,21 @@
+.game {
+  margin: 30px 0;
+  padding: 20px 40px;
+  background-color: rgb(255,255,255,0.7);
+  border-radius: 10px;
+  height: auto;
+}
+
+.game .MuiCircularProgress-root {
+  display: flex;
+  margin: auto;
+  width: 120px !important;
+  height: 120px !important;
+}
+
+@media (max-width: 433px) {
+  .game .MuiCircularProgress-root {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}

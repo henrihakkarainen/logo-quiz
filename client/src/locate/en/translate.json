@@ -19,20 +19,33 @@
       "hidePassword": "Hide password",
       "forgotPassword": "Forgot password?",
       "noAccount": "Don't have an account yet?",
-      "signUp": "Sign Up!"
+      "signUp": "Sign Up!",
+      "rememberMe": "Remember me"
     },
     "username": "Username",
     "password": "Password",
+    "email": "Email",
+    "rePassword": "Retype password",
     "signup": {
       "title": "Sign Up",
-      "haveAccount": "Do you have an account?",
+      "haveAccount": "Already have an account?",
       "login": "Click here to Login",
       "createAccount": "Create account",
       "usernameRequired": "Enter your username",
+      "usernameShort": "Username must be at least 3 characters",
       "emailRequired": "Enter your email address",
       "emailValidity": "Enter a valid email address",
       "passwordRequired": "Enter your password",
-      "passwordsNoMatch": "Passwords must match"
+      "passwordsNoMatch": "Passwords must match",
+      "passwordShort": "Password must be at least 6 characters",
+      "enterUsername": "At least 3 characters",
+      "enterPassword": "At least 6 characters",
+      "retypePassword": "Confirm password"
+    },
+    "forgotPassword": {
+      "title": "Password assistance",
+      "info": "Unfortunately the automatic password recovery feature is not currently available. Please contact an administrator to reset your password.",
+      "back": "Back to login"
     }
   }
 }

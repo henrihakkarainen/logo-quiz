@@ -18,3 +18,16 @@
   color: black !important;
   font-weight: bold !important;
 }
+
+button.close {
+  color: rgb(255, 0, 0);
+  opacity: 0.8;
+}
+
+/* Remove outline and shadow from focused button 
+
+.btn-block:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+*/

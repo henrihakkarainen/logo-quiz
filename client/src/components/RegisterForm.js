@@ -28,7 +28,8 @@ const RegisterForm = (props) => {
 
   const errorMessages = {
     username: {
-      required: t('signup.usernameRequired')
+      required: t('signup.usernameRequired'),
+      short: t('signup.usernameShort')
     },
     email: {
       required: t('signup.emailRequired'),
@@ -36,7 +37,8 @@ const RegisterForm = (props) => {
     },
     password: {
       required: t('signup.passwordRequired'),
-      match: t('signup.passwordsNoMatch')
+      match: t('signup.passwordsNoMatch'),
+      short: t('signup.passwordShort')
     }
   };
 
@@ -48,6 +50,10 @@ const RegisterForm = (props) => {
     if (!username) {
       verifyOk = false;
       setUsernameError(errorMessages.username.required);
+    }
+    if (username && username.length < 3) {
+      verifyOk = false;
+      setUsernameError(errorMessages.username.short);
     }
     if (!email) {
       verifyOk = false;
@@ -65,11 +71,19 @@ const RegisterForm = (props) => {
       verifyOk = false;
       setRePasswordError(errorMessages.password.required);
     }
-    if (password && password !== rePassword) {
+    if (password && password.length < 6) {
+      verifyOk = false;
+      setPasswordError(errorMessages.password.short);
+    }
+    if (password && password.length >= 6 && password !== rePassword) {
       verifyOk = false;
       setPasswordError(errorMessages.password.match);
     }
-    if (rePassword && password !== rePassword) {
+    if (rePassword && rePassword.length < 6) {
+      verifyOk = false;
+      setRePasswordError(errorMessages.password.short);
+    }
+    if (rePassword && rePassword.length >= 6 && password !== rePassword) {
       verifyOk = false;
       setRePasswordError(errorMessages.password.match);
     }
@@ -87,9 +101,9 @@ const RegisterForm = (props) => {
     <Form>
       {error ? <Alert variant="danger">{errorMsg}</Alert> : ''}
       <TextField
-        label="Username"
+        label={t('username')}
         style={{ marginBottom: 10 }}
-        placeholder="Enter username"
+        placeholder={t('signup.enterUsername')}
         error={usernameError ? true : false}
         fullWidth
         margin="normal"
@@ -104,7 +118,7 @@ const RegisterForm = (props) => {
         }}
       />
       <TextField
-        label="Email"
+        label={t('email')}
         style={{ marginBottom: 10 }}
         placeholder="user@email.com"
         error={emailError ? true : false}
@@ -121,10 +135,10 @@ const RegisterForm = (props) => {
         }}
       />
       <TextField
-        label="Password"
+        label={t('password')}
         type={showPassword ? 'text' : 'password'}
         style={{ marginBottom: 10 }}
-        placeholder="Enter password"
+        placeholder={t('signup.enterPassword')}
         error={passwordError ? true : false}
         fullWidth
         margin="normal"
@@ -154,10 +168,10 @@ const RegisterForm = (props) => {
          }}
       />
       <TextField
-        label="Retype password"
+        label={t('rePassword')}
         type={showRePassword ? 'text' : 'password'}
         style={{ marginBottom: 20 }}
-        placeholder="Enter password for confirmation"
+        placeholder={t('signup.retypePassword')}
         error={rePasswordError ? true : false}
         fullWidth
         margin="normal"

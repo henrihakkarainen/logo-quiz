@@ -14,62 +14,89 @@ import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 
 const LoginForm = (props) => {
   const [ t, i18n ] = useTranslation();
+  const [ rememberMe, setRememberMe ] = useState(false);
   const [ viewPassword, setViewPassword ] = useState(false);
+  const [ error, setError ] = useState(false);
+  const [ errorMsg, setErrorMsg ] = useState('');
 
   const togglePasswordVisibility = () => {
     setViewPassword(!viewPassword);
   }
 
+  const onHandleLogin = () => {
+    setError(true);
+    setErrorMsg('Error?')
+  }
+
   return (
     <Form className="align-items-center">
-        <Form.Group>
-          <Form.Label>{t('username')}</Form.Label>
-          <InputGroup>
-            <InputGroup.Prepend>
-              <InputGroup.Text>
-                <PersonIcon />
-              </InputGroup.Text>
-            </InputGroup.Prepend>
-            <Form.Control type="text" placeholder={t('login.enterUsername')} />
-          </InputGroup>
-        </Form.Group>
-
-        <Form.Group>
-          <Form.Label>{t('password')}</Form.Label>
-          <InputGroup>
+      {error ? <Alert variant="danger">{errorMsg}</Alert> : ''}
+      <Form.Group>
+        <Form.Label>{t('username')}</Form.Label>
+        <InputGroup>
           <InputGroup.Prepend>
-              <InputGroup.Text className="form-password"
-                               onClick={togglePasswordVisibility}>
-                <Tooltip title={viewPassword ? t('login.hidePassword') : t('login.viewPassword')}>
-                  {viewPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
-                </Tooltip>
-              </InputGroup.Text>
-            </InputGroup.Prepend>
-            <Form.Control type={viewPassword ? 'text' : 'password'}
-                          placeholder={t('login.enterPassword')} />
-          </InputGroup>
-        </Form.Group>
+            <InputGroup.Text>
+              <PersonIcon />
+            </InputGroup.Text>
+          </InputGroup.Prepend>
+          <Form.Control type="text" placeholder={t('login.enterUsername')} />
+        </InputGroup>
+      </Form.Group>
 
-        <Button block className="mb-2">
-          {t('loginBtn')}
-        </Button>
-        <Grid container>
-          <Grid item xs>
-            <Typography variant="body2">
-              <Link className="form-link" variant="body2">{t('login.forgotPassword')}</Link>
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="body2">
-              {t('login.noAccount')}
-              <br />
-              <Link className="form-link" variant="body2" onClick={() => props.setMode('register')}>
-                {t('login.signUp')}
-              </Link>
-            </Typography>
-          </Grid>
+      <Form.Group>
+        <Form.Label>{t('password')}</Form.Label>
+        <InputGroup>
+          <InputGroup.Prepend>
+            <InputGroup.Text className="form-password"
+              onClick={togglePasswordVisibility}>
+              <Tooltip title={viewPassword ? t('login.hidePassword') : t('login.viewPassword')}>
+                {viewPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+              </Tooltip>
+            </InputGroup.Text>
+          </InputGroup.Prepend>
+          <Form.Control type={viewPassword ? 'text' : 'password'}
+            placeholder={t('login.enterPassword')} />
+        </InputGroup>
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Check
+          type="checkbox"
+          label={t('login.rememberMe')}
+          checked={rememberMe}
+          onChange={() => setRememberMe(!rememberMe)} />
+      </Form.Group>
+
+      <Button block className="mb-2" onClick={onHandleLogin}>
+        {t('loginBtn')}
+      </Button>
+      <Grid container>
+        <Grid item xs>
+          <Typography variant="body2">
+            <Link
+              className="form-link"
+              variant="body2"
+              onClick={() => props.setMode('forgot')}
+            >
+              {t('login.forgotPassword')}
+            </Link>
+          </Typography>
         </Grid>
-      </Form>
+        <Grid item>
+          <Typography variant="body2">
+            {t('login.noAccount')}
+            <br />
+            <Link
+              className="form-link"
+              variant="body2"
+              onClick={() => props.setMode('register')}
+            >
+              {t('login.signUp')}
+            </Link>
+          </Typography>
+        </Grid>
+      </Grid>
+    </Form>
   );
 }
 

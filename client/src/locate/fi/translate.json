@@ -19,20 +19,33 @@
       "hidePassword": "Piilota salasana",
       "forgotPassword": "Unohtuiko salasana?",
       "noAccount": "Eikö sinulla ole vielä tunnuksia?",
-      "signUp": "Rekisteröidy nyt!"
+      "signUp": "Rekisteröidy nyt!",
+      "rememberMe": "Muista minut"
     },
     "username": "Käyttäjätunnus",
     "password": "Salasana",
+    "email": "Sähköposti",
+    "rePassword": "Salasana uudelleen",
     "signup": {
       "title": "Rekisteröidy käyttäjäksi",
       "haveAccount": "Oletko jo rekisteröitynyt käyttäjäksi?",
       "login": "Kirjaudu sisään täältä",
       "createAccount": "Luo käyttäjätunnus",
       "usernameRequired": "Syötä käyttäjätunnus",
+      "usernameShort": "Käyttäjätunnuksessa oltava vähintään 3 merkkiä",
       "emailRequired": "Syötä sähköpostiosoite",
       "emailValidity": "Sähköpostiosoite on virheellinen",
       "passwordRequired": "Syötä salasana",
-      "passwordsNoMatch": "Salasanat eivät täsmää"
+      "passwordsNoMatch": "Salasanat eivät täsmää",
+      "passwordShort": "Salasanassa oltava vähintään 6 merkkiä",
+      "enterUsername": "Vähintään 3 merkkiä",
+      "enterPassword": "Vähintään 6 merkkiä",
+      "retypePassword": "Kirjoita salasana uudelleen"
+    },
+    "forgotPassword": {
+      "title": "Salasanan palauttaminen",
+      "info": "Valitettavasti salasanan automaattinen palauttaminen on toistaiseksi poissa käytöstä. Ota yhteyttä järjestelmänvalvojaan salasanan palauttamiseksi.",
+      "back": "Takaisin sisäänkirjautumiseen"
     }
   }
 }

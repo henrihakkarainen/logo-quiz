@@ -1,24 +1,44 @@
 .categories {
-  margin: 30px 0 0;
-  padding: 20px 0;
-  text-align: center;
+  margin: 30px 0;
+  padding: 20px 40px;
   background-color: rgb(255,255,255,0.7);
   border-radius: 10px;
 }
 
-.category {
-  display: flex;
-  border: 2px double white;
-  border-style: double;
-  width: 300px;
-  margin: 30px auto auto;
-  border-radius: 10px;
-  height: 150px;
-  align-items: center;
-  justify-content: left;
-  padding-left: 15px;
-  font-style: italic;
-  font-size: 28px;
-  background-size: cover;
-  color: white;
+.categories h4 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card {
+  width: 20rem;
+}
+
+.card-link {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card-img {
+  min-height: 179px;
+  max-height: 179px;
+}
+
+@media (max-width: 433px) {
+  .categories {
+    margin: 20px 0;
+    padding: 20px 20px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .card-body .card-text {
+    font-size: 80%;
+  }
+
+  .card-link {
+    font-size: 80%;
+  }
 }

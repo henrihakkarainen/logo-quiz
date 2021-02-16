@@ -9,6 +9,7 @@ import LanguageSelection from './components/LanguageSelection';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import Games from './components/Games';
+import Play from './components/Play';
 import Modal from './components/ModalForm';
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
                       router={Router.router} />
           <Route path="/" exact component={Home} />
           <Route path="/games" component={Games} />
+          <Route path="/play" component={Play} />
         </Container>
       </Router>
       <Modal show={showLogin} onHide={onCloseLogin} />

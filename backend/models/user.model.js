@@ -6,7 +6,7 @@ const userSchema = new Schema({
   username: {
     type: String,
     trim: true,
-    minlength: 2,
+    minlength: 3,
     maxlength: 25,
     required: true,
     unique: true
@@ -24,7 +24,7 @@ const userSchema = new Schema({
   password: {
     type: String,
     required: true,
-    minlength: 1,
+    minlength: 6,
     set: (password) => {
       if (!password || password.length === 0) return password;
       // encrypt password before storing it to database

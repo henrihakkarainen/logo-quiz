@@ -1,5 +1,6 @@
 .modal-content {
   padding: 10px;
+  text-align: left;
 }
 
 .form-label {
@@ -23,6 +24,7 @@ button.close {
   color: rgb(255, 0, 0);
   opacity: 0.8;
 }
+
 
 /* Remove outline and shadow from focused button 
 

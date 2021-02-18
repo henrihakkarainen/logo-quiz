@@ -36,51 +36,101 @@ const Game = (props) => {
   const [ t, i18n ] = useTranslation();
   const [ playing, setPlaying ] = useState(false);
   const [ score, setScore ] = useState(0);
+  const [ addedPoints, setAddedPoints ] = useState(0);
   const [ currentQuestion, setCurrentQuestion ] = useState(null);
   const [ round, setRound ] = useState(1);
   const [ timeLeft, setTimeLeft ] = useState(10000);
+  const [ timeRunning, setTimeRunning ] = useState(false);
 
-  useEffect(() => {
-    pickRandomQuestion()
-  }, [round])
+  const buttonClasses = {
+    correct: 'correct-choice',
+    wrong: 'wrong-choice'
+  };
 
+  /*
   useEffect(() => {
     console.log(timeLeft)
-  }, [timeLeft])
+  }, [ timeLeft ])
+  */
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (playing) setTimeLeft(calculateTimeLeft())
-    }, 500)
+      if (playing && timeRunning) setTimeLeft(calculateTimeLeft())
+    }, 200)
     return () => clearTimeout(timer)   
   })
 
   const onHandleGameStart = () => {
-    setRound(1);
+    pickRandomQuestion(round);
+    setScore(0);
     setTimeLeft(10000);
     setPlaying(true);
+    setTimeRunning(true);
   }
 
   const onHandleGameEnd = () => {
     setPlaying(false);
+    setRound(1);
   }
 
-  const onChooseRight = () => {
-    if (round !== 10) {
-      setRound(round + 1);
-      setTimeLeft(10000);
-    }
+  const onChooseRight = (e) => {
+    if (e.target.localName === 'span')
+      e.target.parentElement.classList.add(buttonClasses.correct);
+    else
+      e.target.classList.add(buttonClasses.correct);
+
+    console.log('time left:', timeLeft)
+    const countPoints = calculatePositiveScore();
+    setAddedPoints(countPoints)
+    setTimeout(() => {
+      e.target.classList.remove(buttonClasses.correct);
+      e.target.parentElement.classList.remove(buttonClasses.correct);
+      if (round !== 10) {
+        pickRandomQuestion(round + 1);
+        setScore(score + countPoints)
+        setRound(round + 1);
+        setTimeLeft(10000);
+        setTimeRunning(true);
+      } else {
+        setScore(score + countPoints)
+        onHandleGameEnd();
+      }
+    }, 2000)
+    
   }
 
-  const onChooseWrong = () => {
-    onHandleGameEnd();
+  const onChooseWrong = (e) => {
+    if (e.target.localName === 'span')
+      e.target.parentElement.classList.add(buttonClasses.wrong);
+    else
+      e.target.classList.add(buttonClasses.wrong);
+
+    const countPoints = calculateNegativeScore();
+    setAddedPoints(countPoints)
+    setTimeout(() => {
+      e.target.classList.remove(buttonClasses.wrong);
+      e.target.parentElement.classList.remove(buttonClasses.wrong);
+      setScore(score + addedPoints)
+      onHandleGameEnd();
+    }, 2000)
   }
 
   const calculateTimeLeft = () => {
-    return timeLeft !== 0 ? timeLeft - 500 : 0;
+    return timeLeft !== 0 ? timeLeft - 200 : 0;
   }
 
-  const pickRandomQuestion = () => {
+  // Minimum score for a correct answer is 100 points
+  const calculatePositiveScore = () => {
+    const score = Number.parseInt(timeLeft * (round / 3) / 5);
+    return score < 100 ? 100 : score;
+  }
+
+  const calculateNegativeScore = () => {
+    const minusScore = Number.parseInt(round * 95);
+    return minusScore > score ? -score : -minusScore;
+  }
+
+  const pickRandomQuestion = (round) => {
     // Get possible questions for the current round
     const questionsByRound = _.filter(questions, (question) => 
       question.difficulty === round);
@@ -110,8 +160,16 @@ const Game = (props) => {
           </Col>
         </Row>
         <Row>
+          <Col 
+            className={`game-score ${timeRunning || addedPoints === 0 ? 'add-score' : ''}`}
+            style={{ color: `${addedPoints < 0 ? 'red' : 'green'}` }}
+          >
+            {`${addedPoints < 0 ? '-' : '+'} ${Math.abs(addedPoints)}`}
+          </Col>
+        </Row>
+        <Row>
           <Col className="game-progress">Progress: {round} / 10</Col>
-          <Col className="game-score">Points: {score}</Col>
+          <Col className="game-score">Score: {score}</Col>
         </Row>
         <Row className="logo-and-questions">
           <Col sm={12} md={6}>
@@ -125,9 +183,12 @@ const Game = (props) => {
                     <Button
                       className="q-button"
                       variant="outlined"
-                      onClick={() => {
-                        option === currentQuestion.correct ? onChooseRight() : onChooseWrong()
-                      }}
+                      onClick={(e) => {
+                        if (timeRunning) {
+                          setTimeRunning(false);
+                          option === currentQuestion.correct ? onChooseRight(e) : onChooseWrong(e)
+                        }
+                       }}
                     >
                         {option}
                     </Button>

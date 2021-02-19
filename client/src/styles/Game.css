@@ -13,6 +13,14 @@
   height: 120px !important;
 }
 
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
 .start-screen {
   text-align: center;
   padding: 0 10vw;
@@ -39,13 +47,14 @@
 }
 
 .game-logo {
-  width: 250px;
+  max-width: 300px;
 }
 
 .q-button {
   width: 100%;
   background-color: rgba(65, 60, 60, 0.6) !important;
   color: white !important;
+  font-size: 0.9rem !important;
   font-weight: bold !important;
   text-transform: none !important;
   border-color: rgb(0, 0, 0, 0.9) !important;
@@ -59,16 +68,16 @@
   background-color: rgb(255, 80, 80) !important;
 }
 
-.game-progress {
-  text-align: left;
-}
-
 .game-score {
   text-align: right;
 }
 
 .add-score {
   visibility: hidden;
+}
+
+.progress-icon {
+  margin: 0 -3px;
 }
 
 @media (max-width: 433px) {
@@ -101,15 +110,22 @@
 
   .game-logo {
     max-width: 160px;
+    padding-bottom: 15px;
   }
 
-  .game-progress {
-    text-align: left;
+  .question-row {
+    padding: 1px 10px;        
+  }
+
+  .q-button {
+    font-size: 80% !important;
+  }
+
+  .font-sizing {
     font-size: 80%;
   }
-  
-  .game-score {
-    text-align: right;
-    font-size: 80%;
+
+  .end-game-btn {
+    text-align: center;
   }
 }

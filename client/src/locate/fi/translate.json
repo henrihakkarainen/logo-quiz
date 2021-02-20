@@ -50,7 +50,14 @@
     "game": {
       "description": "Tietovisassa näet logon ja neljä vastausvaihtoehtoa, joista tehtävänäsi on valita oikea. Käytössäsi on kaksi oljenkortta, joista kumpaakin voit käyttää yhden kerran pelin aikana. Sinulla on ainoastaan 10 sekuntia aikaa vastata kuhunkin kysymykseen.",
       "goodLuck": "Onnea peliin!",
-      "start": "Aloita peli"
+      "loading": "Ladataan pelin tietoja, odota hetki...",
+      "start": "Aloita peli",
+      "progress": "Edistyminen",
+      "score": "Pisteet",
+      "points": "pistettä",
+      "removeTwo": "Poista 2",
+      "skip": "Ohita",
+      "endHere": "Jää tähän"
     }
   }
 }

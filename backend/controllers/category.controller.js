@@ -83,9 +83,22 @@ const findOne = async (req, res) => {
 }
 
 const findPublished = async (req, res) => {
+  const { title } = req.query;
+  const query = {
+    $and: [
+      {
+        $or: [
+          { 'title.en': { $regex: new RegExp(`^${title}$`), $options: 'i' } },
+          { 'title.fi': { $regex: new RegExp(`^${title}$`), $options: 'i' } }
+        ]
+      },
+      { published: true }
+    ]
+  }
+  const condition = title ? query : { published: true }
+
   try {
-    const data = await Category.find({ published: true }).exec();
-    console.log(data)
+    const data = await Category.find(condition).exec();
     res.json(data);
   } catch (err) {
     res.status(500).json({

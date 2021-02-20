@@ -52,6 +52,7 @@ const Game = (props) => {
     fiftyfifty: false,
     skip: false
   });
+  const [ hide, setHide ] = useState(false);
 
   const buttonClasses = {
     correct: 'correct-choice',
@@ -98,6 +99,7 @@ const Game = (props) => {
       e.target.classList.remove(buttonClasses.correct);
       e.target.parentElement.classList.remove(buttonClasses.correct);
       if (round !== 10) {
+        setHide(false);
         pickRandomQuestion(round + 1);
         setScore(score + countPoints)
         setRound(round + 1);
@@ -140,7 +142,7 @@ const Game = (props) => {
   }
 
   const onHandleRemoveTwo = () => {
-    console.log('fiftyfifty')
+    setHide(true);
     setLifelinesUsed({ ...lifelinesUsed, fiftyfifty: true });
   }
 
@@ -170,17 +172,23 @@ const Game = (props) => {
 
     // Randomly pick one question
     const pickOne = _.sample(questionsByRound);
+
+    const shuffled = _.shuffle(pickOne.options).slice(0, 3);
     
     // Shuffle a list of 4 choices that are answer alternatives, one of them
     // is of course the correct choice (using spread syntax here)
     const choices = [
-      ..._.shuffle(pickOne.options).slice(0, 3),
+      ...shuffled,
       pickOne.correct
     ];
 
+    // Determine which questions will get removed when fifty-fifty is used
+    const hideTwo = shuffled.slice(0, 2);
+
     setCurrentQuestion({
       ...pickOne,
-      choices: _.shuffle(choices)
+      choices: _.shuffle(choices),
+      hide: hideTwo
     });
   }
 
@@ -197,12 +205,12 @@ const Game = (props) => {
             className={`align-right font-sizing ${timeRunning || addedPoints === 0 ? 'add-score' : ''}`}
             style={{ color: `${addedPoints < 0 ? 'red' : 'green'}` }}
           >
-            {`${addedPoints < 0 ? '-' : '+'} ${Math.abs(addedPoints)}`}
+            {`${addedPoints < 0 ? '-' : '+'} ${Math.abs(addedPoints)} ${t('game.points')}`}
           </Col>
         </Row>
         <Row>
-          <Col className="align-left font-sizing">Progress: {round} / 10</Col>
-          <Col className="align-right font-sizing">Score: {score}</Col>
+          <Col className="align-left font-sizing">{t('game.progress')}: {round} / 10</Col>
+          <Col className="align-right font-sizing">{t('game.score')}: {score}</Col>
         </Row>
         <Row className="logo-and-questions">
           <Col sm={12} md={6}>
@@ -216,6 +224,7 @@ const Game = (props) => {
                     <Button
                       className="q-button"
                       variant="outlined"
+                      style={{ visibility: `${hide && currentQuestion.hide.includes(option) ? 'hidden' : 'visible'}` }}
                       onClick={(e) => {
                         if (timeRunning) {
                           setTimeRunning(false);
@@ -233,8 +242,9 @@ const Game = (props) => {
         </Row>
         <Row>
           <Col xs={12} sm={6} className="align-left">
-            <Row>
+            <Row style={{ margin: 0 }}>
               <Button
+                className="lifeline-btn"
                 startIcon={<Remove2Icon />}
                 variant="outlined"
                 disabled={lifelinesUsed.fiftyfifty}
@@ -244,9 +254,10 @@ const Game = (props) => {
                   }
                 }}
               >
-                Poista 2
+                {t('game.removeTwo')}
               </Button>
               <Button
+                className="lifeline-btn"
                 startIcon={<RedoIcon />}
                 variant="outlined"
                 disabled={lifelinesUsed.skip || round === 10}
@@ -257,12 +268,18 @@ const Game = (props) => {
                   }
                 }}
               >
-                Skip
+                {t('game.skip')}
               </Button>
             </Row>
           </Col>
           <Col xs={12} sm={6} className="align-right end-game-btn">
-            <Button startIcon={<DoneIcon />} variant="outlined">Jää tähän</Button>
+            <Button
+              className="lifeline-btn"
+              startIcon={<DoneIcon />}
+              variant="outlined"
+            >
+              {t('game.endHere')}
+            </Button>
           </Col>
         </Row>
         <Row style={{ margin: '20px -30px 0' }}>

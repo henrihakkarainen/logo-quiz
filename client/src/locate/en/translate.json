@@ -50,7 +50,14 @@
     "game": {
       "description": "The quiz will display a logo with four different alternatives and your task is to choose the correct one for each question. You have two lifelines, each of them can be used once. You have only 10 seconds to answer a single question.",
       "goodLuck": "Good luck!",
-      "start": "Start game"
+      "loading": "Loading game, please wait...",
+      "start": "Start game",
+      "progress": "Progress",
+      "score": "Score",
+      "points": "points",
+      "removeTwo": "Remove 2",
+      "skip": "Skip",
+      "endHere": "End Game"
     }
   }
 }

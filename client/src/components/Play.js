@@ -11,13 +11,13 @@ import Game from './Game';
 
 import '../styles/Game.css';
 
-const Loading = () => {
+const Loading = ({ t }) => {
   return (
     <div>
       <CircularProgress />
       <br />
       <Typography variant="body1">
-        Loading game, please wait...
+        {t('game.loading')}
       </Typography>
     </div>    
   );
@@ -31,7 +31,7 @@ const Error = (props) => {
   );
 }
 
-const Play = (props) => {
+const Play = () => {
   
   const useQuery = () => {
     return new URLSearchParams(useLocation().search);
@@ -44,7 +44,7 @@ const Play = (props) => {
   const [ loading, setLoading ] = useState(true);
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/api/categories?title=${category}`)
+    axios.get(`http://localhost:8080/api/categories/published?title=${category}`)
       .then(res => {
         setGame(res.data[0])
       })
@@ -66,7 +66,7 @@ const Play = (props) => {
     <div className="game-container">
       {
         loading ?
-        <Loading /> :
+        <Loading t={t} /> :
         game && Array.isArray(gameData) && gameData.length !== 0 ?
         <Game game={game} questions={gameData} /> :
         <Error title={category} />

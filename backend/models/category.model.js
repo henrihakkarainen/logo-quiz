@@ -23,13 +23,13 @@ const categorySchema = new Schema({
       type: String,
       required: true,
       minlength: 5,
-      maxlength: 100
+      maxlength: 250
     },
     fi: {
       type: String,
       required: true,
       minlength: 5,
-      maxlength: 100
+      maxlength: 250
     }
   },
   published: {

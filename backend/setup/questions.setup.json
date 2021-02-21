@@ -358,5 +358,454 @@
     "difficulty": 10,
     "category": "Cars",
     "imageURL": "/categories/cars/saturn.png"
+  },
+
+  {
+    "alias": "jokerit",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Helsingin Jokerit",
+    "difficulty": 1,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/jokerit.png"
+  },
+  {
+    "alias": "assat",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Porin Ässät",
+    "difficulty": 1,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/assat.png"
+  },
+  {
+    "alias": "ilves",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Tampereen Ilves",
+    "difficulty": 1,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/ilves.png"
+  },
+  {
+    "alias": "tappara",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Tampereen Tappara",
+    "difficulty": 1,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/tappara.png"
+  },
+  {
+    "alias": "florida-panthers",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Florida Panthers",
+    "difficulty": 1,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/florida-panthers.png"
+  },
+  {
+    "alias": "anaheim-ducks",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Anaheim Ducks",
+    "difficulty": 1,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/anaheim-ducks.png"
+  },
+  {
+    "alias": "karpat",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Oulun Kärpät",
+    "difficulty": 2,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/karpat.png"
+  },
+  {
+    "alias": "calgary-flames",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Calgary Flames",
+    "difficulty": 2,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/calgary-flames.png"
+  },
+  {
+    "alias": "colorado-avalanche",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Colorado Avalanche",
+    "difficulty": 2,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/colorado-avalanche.png"
+  },
+  {
+    "alias": "dallas-stars",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Dallas Stars",
+    "difficulty": 2,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/dallas-stars.png"
+  },
+  {
+    "alias": "edmonton-oilers",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Edmonton Oilers",
+    "difficulty": 2,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/edmonton-oilers.png"
+  },
+  {
+    "alias": "nashville-predators",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Nashville Predators",
+    "difficulty": 2,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/nashville-predators.png"
+  },
+  {
+    "alias": "jyp",
+    "options": ["", "", "", "", "", ""],
+    "correct": "JYP Jyväskylä",
+    "difficulty": 3,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/jyp.png"
+  },
+  {
+    "alias": "sport",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Vaasan Sport",
+    "difficulty": 3,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/sport.png"
+  },
+  {
+    "alias": "tampa-bay-lightning",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Tampa Bay Lightning",
+    "difficulty": 3,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/tampa-bay-lightning.png"
+  },
+  {
+    "alias": "chicago-blackhawks",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Chicago Blackhawks",
+    "difficulty": 3,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/chicago-blackhawks.png"
+  },
+  {
+    "alias": "pittsburgh-penguins",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Pittsburgh Penguins",
+    "difficulty": 3,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/pittsburgh-penguins.png"
+  },
+  {
+    "alias": "montreal-canadiens",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Montreal Canadiens",
+    "difficulty": 3,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/montreal-canadiens.png"
+  },
+  {
+    "alias": "minnesota-wild",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Minnesota Wild",
+    "difficulty": 4,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/minnesota-wild.png"
+  },
+  {
+    "alias": "jukurit",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Mikkelin Jukurit",
+    "difficulty": 4,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/jukurit.png"
+  },
+  {
+    "alias": "los-angeles-kings",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Los Angeles Kings",
+    "difficulty": 4,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/los-angeles-kings.png"
+  },
+  {
+    "alias": "detroit-red-wings",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Detroit Red Wings",
+    "difficulty": 4,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/detroit-red-wings.png"
+  },
+  {
+    "alias": "carolina-hurricanes",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Carolina Hurricanes",
+    "difficulty": 4,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/carolina-hurricanes.png"
+  },
+  {
+    "alias": "boston-bruins",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Boston Bruins",
+    "difficulty": 4,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/boston-bruins.png"
+  },
+  {
+    "alias": "lukko",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Rauman Lukko",
+    "difficulty": 5,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/lukko.png"
+  },
+  {
+    "alias": "buffalo-sabres",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Buffalo Sabres",
+    "difficulty": 5,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/buffalo-sabres.png"
+  },
+  {
+    "alias": "ottawa-senators",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Ottawa Senators",
+    "difficulty": 5,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/ottawa-senators.png"
+  },
+  {
+    "alias": "vancouver-canucks",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Vancouver Canucks",
+    "difficulty": 5,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/vancouver-canucks.png"
+  },
+  {
+    "alias": "winnipeg-jets",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Winnipeg Jets",
+    "difficulty": 5,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/winnipeg-jets.png"
+  },
+  {
+    "alias": "philadelphia-flyers",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Philadelphia Flyers",
+    "difficulty": 5,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/philadelphia-flyers.png"
+  },
+  {
+    "alias": "columbus-blue-jackets",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Columbus Blue Jackets",
+    "difficulty": 6,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/columbus-blue-jackets.png"
+  },
+  {
+    "alias": "san-jose-sharks",
+    "options": ["", "", "", "", "", ""],
+    "correct": "San Jose Sharks",
+    "difficulty": 6,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/san-jose-sharks.png"
+  },
+  {
+    "alias": "vegas-golden-knights",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Vegas Golden Knights",
+    "difficulty": 6,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/vegas-golden-knights.png"
+  },
+  {
+    "alias": "st-louis-blues",
+    "options": ["", "", "", "", "", ""],
+    "correct": "St. Louis Blues",
+    "difficulty": 6,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/st-louis-blues.png"
+  },
+  {
+    "alias": "new-jersey-devils",
+    "options": ["", "", "", "", "", ""],
+    "correct": "New Jersey Devils",
+    "difficulty": 6,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/new-jersey-devils.png"
+  },
+  {
+    "alias": "arizona-coyotes",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Arizona Coyotes",
+    "difficulty": 7,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/arizona-coyotes.png"
+  },
+  {
+    "alias": "frolunda-indians",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Frölunda Indians",
+    "difficulty": 7,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/frolunda-indians.png"
+  },
+  {
+    "alias": "cska-moscow",
+    "options": ["", "", "", "", "", ""],
+    "correct": "CSKA Moscow",
+    "difficulty": 7,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/cska-moscow.png"
+  },
+  {
+    "alias": "brynas-if",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Brynäs IF",
+    "difficulty": 7,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/brynas-if.png"
+  },
+  {
+    "alias": "amur-khabarovsk",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Amur Khabarovsk",
+    "difficulty": 7,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/amur-khabarovsk.png"
+  },
+  {
+    "alias": "dinamo-riga",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Dinamo Riga",
+    "difficulty": 8,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/dinamo-riga.png"
+  },
+  {
+    "alias": "metallurg-magnitogorsk",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Metallurg Magnitogorsk",
+    "difficulty": 8,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/metallurg-magnitogorsk.png"
+  },
+  {
+    "alias": "sapko",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Savonlinnan Pallokerho (SaPKo)",
+    "difficulty": 8,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/sapko.png"
+  },
+  {
+    "alias": "toronto-marlies",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Toronto Marlies",
+    "difficulty": 8,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/toronto-marlies.png"
+  },
+  {
+    "alias": "lokomotiv-yaroslavl",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Lokomotiv Yaroslavl",
+    "difficulty": 8,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/lokomotiv-yaroslavl.png"
+  },
+  {
+    "alias": "hc-sochi",
+    "options": ["", "", "", "", "", ""],
+    "correct": "HC Sochi",
+    "difficulty": 9,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/hc-sochi.png"
+  },
+  {
+    "alias": "dinamo-minsk",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Dinamo Minsk",
+    "difficulty": 9,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/dinamo-minsk.png"
+  },
+  {
+    "alias": "avtomobilist-ekaterinburg",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Avtomobilist Ekaterinburg",
+    "difficulty": 9,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/avtomobilist-ekaterinburg.png"
+  },
+  {
+    "alias": "chicago-wolves",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Chicago Wolves",
+    "difficulty": 9,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/chicago-wolves.png"
+  },
+  {
+    "alias": "barys-nur-sultan",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Barys Nur-Sultan",
+    "difficulty": 9,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/barys-nur-sultan.png"
+  },
+  {
+    "alias": "avangard-omsk",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Avangard Omsk",
+    "difficulty": 10,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/avangard-omsk.png"
+  },
+  {
+    "alias": "severstal-cherepovets",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Severstal Cherepovets",
+    "difficulty": 10,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/severstal-cherepovets.png"
+  },
+  {
+    "alias": "slovan-bratislava",
+    "options": ["", "", "", "", "", ""],
+    "correct": "HC Slovan Bratislava",
+    "difficulty": 10,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/slovan-bratislava.png"
+  },
+  {
+    "alias": "torpedo-nizhny-novgorod",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Torpedo Nizhny Novgorod",
+    "difficulty": 10,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/torpedo-nizhny-novgorod.png"
+  },
+  {
+    "alias": "traktor-chelyabinsk",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Traktor Chelyabinsk",
+    "difficulty": 10,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/traktor-chelyabinsk.png"
+  },
+  {
+    "alias": "salavat-yulaev-ufa",
+    "options": ["", "", "", "", "", ""],
+    "correct": "Salavat Yulaev Ufa",
+    "difficulty": 10,
+    "category": "Ice Hockey",
+    "imageURL": "/categories/hockey/salavat-yulaev-ufa.png"
   }
 ]

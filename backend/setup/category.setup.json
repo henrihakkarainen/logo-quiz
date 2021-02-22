@@ -1,5 +1,6 @@
 [
   {
+    "alias": "cars",
     "title": {
       "en": "Cars",
       "fi": "Autot"
@@ -12,13 +13,14 @@
     "backgroundImageURL": "/categories/cars.png"
   },
   {
+    "alias": "icehockey",
     "title": {
       "en": "Ice Hockey",
       "fi": "Jääkiekko"
     },
     "description": {
-      "en": "Let's see how well you recognize the logos of various ice hockey clubs. There are logos from the following leagues: NHL, KHL, AHL, SHL (Sweden), Liiga (Finland) and Mestis (Finland).",
-      "fi": "Testaa jääkiekkotietämystäsi tunnistamalla jääkiekkoseuroja pelkän logon perusteella! Visassa voi esiintyä seuroja seuraavista liigoista: NHL, KHL, AHL, SHL, Liiga ja Mestis."
+      "en": "Let's see how well you recognize the logos of various ice hockey clubs. There are logos from the following leagues: NHL, KHL, AHL, OHL, WHL, ECHL, DEL, NLA, SHL, Liiga and Mestis.",
+      "fi": "Testaa jääkiekkotietämystäsi tunnistamalla jääkiekkoseuroja pelkän logon perusteella! Visassa voi esiintyä seuroja seuraavista liigoista: NHL, KHL, AHL, OHL, WHL, ECHL, DEL, NLA, SHL, Liiga ja Mestis."
     },
     "published": true,
     "backgroundImageURL": "/categories/hockey.png"

@@ -21,7 +21,7 @@ const Category = (props) => {
       </Card.Body>
       <ListGroup>
         <ListGroupItem>
-          <LinkContainer to={`/play?category=${props.title['en'].toLowerCase()}`}>
+          <LinkContainer to={`/play?category=${props.alias}`}>
             <Card.Link>Play</Card.Link>
           </LinkContainer>
           <LinkContainer to="/highscores">

@@ -20,9 +20,7 @@ const createGameData = async () => {
     await Category.create(categoryData);
 
     for (const question of questionData) {
-      const category = await Category.findOne({
-        $or: [ { 'title.en': question.category }, { 'title.fi': question.category } ]
-      }).exec();
+      const category = await Category.findOne({ 'alias': question.category }).exec();
       question.categoryID = category._id;
     }
     

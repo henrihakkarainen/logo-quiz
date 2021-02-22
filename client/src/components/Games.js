@@ -27,6 +27,7 @@ const Games = (props) => {
         <Category key={item.id}
                   title={item.title}
                   description={item.description}
+                  alias={item.alias}
                   bgUrl={item.backgroundImageURL} />
       )}
       <br />

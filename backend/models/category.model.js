@@ -2,6 +2,13 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const categorySchema = new Schema({
+  alias: {
+    type: String,
+    required: true,
+    minlength: 3,
+    maxlength: 40,
+    unique: true
+  },
   title: {
     en: {
       type: String,

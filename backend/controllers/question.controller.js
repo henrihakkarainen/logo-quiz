@@ -12,12 +12,10 @@ const create = async (req, res) => {
     });
   }
 
-  const category = await Category.findOne({
-    $or: [ { 'title.en': categoryTitle }, { 'title.fi': categoryTitle } ]
-  }).exec();
+  const category = await Category.findOne({ 'alias': categoryTitle }).exec();
   if (!category) {
     return res.status(500).json({
-      message: `Category "${categoryTitle}" was not found and question couldn't be added`
+      message: `Category with alias "${categoryTitle}" was not found and question couldn't be added`
     });
   }
 
@@ -56,12 +54,7 @@ const create = async (req, res) => {
 // Retrieve all questions
 const findAll = async (req, res) => {
   const { category, difficulty } = req.query;
-  const query = {
-    $or : [
-      { 'title.en' : { $regex: new RegExp(`^${category}$`), $options: 'i' } },
-      { 'title.fi' : { $regex: new RegExp(`^${category}$`), $options: 'i' } }
-    ]
-  }
+  const query =  { 'alias' : { $regex: new RegExp(`^${category}$`), $options: 'i' } }
   let condition = category ? query : {};
 
   try {
@@ -80,7 +73,7 @@ const findAll = async (req, res) => {
           return res.status(400).json({
             message: 'Query parameter difficulty must be an integer'
           });
-        }        
+        }
       } else {
         const data = await Question.find(condition).exec();
         res.json(data);

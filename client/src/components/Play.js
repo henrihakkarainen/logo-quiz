@@ -26,7 +26,7 @@ const Loading = ({ t }) => {
 const Error = (props) => {
   return (
     <div>
-      Game "{props.title.toUpperCase()}" was not found
+      Game not found
     </div>
   );
 }
@@ -52,7 +52,7 @@ const Play = () => {
 
   useEffect(() => {
     if (game) {
-      axios.get(`http://localhost:8080/api/questions?category=${game.title?.en}`)
+      axios.get(`http://localhost:8080/api/questions?category=${game.alias}`)
         .then(res => {
           setGameData(res.data)
           setLoading(false)

@@ -29,6 +29,7 @@ const create = async (req, res) => {
   }
 
   const category = new Category({
+    alias: title.en.replace(/\s/g, '').toLowerCase(),
     title,
     description
   });
@@ -45,12 +46,7 @@ const create = async (req, res) => {
 
 const findAll = async (req, res) => {
   const { title } = req.query;
-  const query = {
-    $or: [
-      { 'title.en': { $regex: new RegExp(`^${title}$`), $options: 'i' } },
-      { 'title.fi': { $regex: new RegExp(`^${title}$`), $options: 'i' } }
-    ]
-  }
+  const query = { 'alias': { $regex: new RegExp(`^${title}$`), $options: 'i' } }
   const condition = title ? query : {}
   
   try {
@@ -85,13 +81,8 @@ const findOne = async (req, res) => {
 const findPublished = async (req, res) => {
   const { title } = req.query;
   const query = {
-    $and: [
-      {
-        $or: [
-          { 'title.en': { $regex: new RegExp(`^${title}$`), $options: 'i' } },
-          { 'title.fi': { $regex: new RegExp(`^${title}$`), $options: 'i' } }
-        ]
-      },
+    $and: [    
+      { 'alias': { $regex: new RegExp(`^${title}$`), $options: 'i' } },      
       { published: true }
     ]
   }

@@ -4,7 +4,7 @@
     "options": ["Alpine", "Arrinera", "Alfa Romeo", "Alta", "Austin", "Axon"],
     "correct": "Audi",
     "difficulty": 1,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/audi.png"
   },
   {
@@ -12,7 +12,7 @@
     "options": ["Holden", "Infiniti", "Hyundai", "Hillman", "Lancia", "Acura"],
     "correct": "Honda",
     "difficulty": 1,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/honda.png"
   },
   {
@@ -20,7 +20,7 @@
     "options": ["McLaren", "Mercedes-AMG", "Maybach", "Mazzanti", "Maxus", "Morgan"],
     "correct": "Mercedes-Benz",
     "difficulty": 1,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/mercedes-benz.png"
   },
   {
@@ -28,7 +28,7 @@
     "options": ["Nissan", "Trion", "Lexus", "Mazda", "Citroën", "Renault"],
     "correct": "Toyota",
     "difficulty": 1,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/toyota.png"
   },
   {
@@ -36,7 +36,7 @@
     "options": ["Wuling", "Wanderer", "Volvo", "Venucia", "Vauxhall", "Honda"],
     "correct": "Volkswagen",
     "difficulty": 1,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/volkswagen.png"
   },
   {
@@ -44,7 +44,7 @@
     "options": ["Opel", "Audi", "Ford", "Volvo", "Mercedes-Benz", "Volkswagen"],
     "correct": "BMW",
     "difficulty": 2,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/bmw.png"
   },
   {
@@ -52,7 +52,7 @@
     "options": ["Lexus", "Chrysler", "Chevrolet", "Chery", "Ford", "Mazda"],
     "correct": "Citroën",
     "difficulty": 2,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/citroen.png"
   },
   {
@@ -60,7 +60,7 @@
     "options": ["Toyota", "Nissan", "Daewoo", "Chery", "Renault", "Chrysler"],
     "correct": "Mazda",
     "difficulty": 2,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/mazda.png"
   },
   {
@@ -68,7 +68,7 @@
     "options": ["Volkswagen", "Citroen", "Nissan", "Ford", "Opel", "Lancia"],
     "correct": "Volvo",
     "difficulty": 2,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/volvo.png"
   },
   {
@@ -76,7 +76,7 @@
     "options": ["Mitsubishi", "Mazda", "Holden", "Jaguar", "Renault", "Pagani"],
     "correct": "Peugeot",
     "difficulty": 2,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/peugeot.png"
   },
   {
@@ -84,7 +84,7 @@
     "options": ["Oldsmobile", "Lexus", "Nissan", "Fiat", "Lancia", "Mazda"],
     "correct": "Opel",
     "difficulty": 3,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/opel.png"
   },
   {
@@ -92,7 +92,7 @@
     "options": ["Alfa Romeo", "Saab", "Suzuki", "Subaru", "Scania", "Sisu"],
     "correct": "Škoda",
     "difficulty": 3,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/skoda.png"
   },
   {
@@ -100,7 +100,7 @@
     "options": ["Suzuki", "Scion", "Saab", "Škoda", "Scania", "Subaru"],
     "correct": "Seat",
     "difficulty": 3,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/seat.png"
   },
   {
@@ -108,7 +108,7 @@
     "options": ["Suzuki", "Seat", "Subaru", "Ford", "Lancia", "Sisu"],
     "correct": "Saab",
     "difficulty": 3,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/saab.png"
   },
   {
@@ -116,7 +116,7 @@
     "options": ["Rover", "Dacia", "Lexus", "Roewe", "Peugeot", "Fiat"],
     "correct": "Renault",
     "difficulty": 3,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/renault.png"
   },
   {
@@ -124,7 +124,7 @@
     "options": ["Daihatsu", "McLaren", "Suzuki", "Kia", "Daewoo", "Land Rover"],
     "correct": "Mitsubishi",
     "difficulty": 4,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/mitsubishi.png"
   },
   {
@@ -132,7 +132,7 @@
     "options": ["Honda", "Holden", "Haima", "Hummer", "Nissan", "Zenos"],
     "correct": "Hyundai",
     "difficulty": 4,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/hyundai.png"
   },
   {
@@ -140,7 +140,7 @@
     "options": ["Porsche", "Lamborghini", "Bugatti", "Jaguar", "Chevrolet", "McLaren"],
     "correct": "Ferrari",
     "difficulty": 4,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/ferrari.png"
   },
   {
@@ -148,7 +148,7 @@
     "options": ["McLaren", "Maserati", "Rolls-Royce", "Ferrari", "Bugatti", "Porsche"],
     "correct": "Lamborghini",
     "difficulty": 4,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/lamborghini.png"
   },
   {
@@ -156,7 +156,7 @@
     "options": ["Cadillac", "McLaren", "Aston Martin", "Alfa Romeo", "Dodge", "Chrysler"],
     "correct": "Chevrolet",
     "difficulty": 4,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/chevrolet.png"
   },
   {
@@ -164,7 +164,7 @@
     "options": ["Dodge", "Daewoo", "Datsun", "Dacia", "Daimler", "De Tomaso"],
     "correct": "Daihatsu",
     "difficulty": 5,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/daihatsu.png"
   },
   {
@@ -172,7 +172,7 @@
     "options": ["Porsche", "Ferrari", "Peugeot", "Alfa Romeo", "Bentley", "Geely"],
     "correct": "Jaguar",
     "difficulty": 5,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/jaguar.png"
   },
   {
@@ -180,7 +180,7 @@
     "options": ["Subaru", "Saab", "Škoda", "Scion", "Scania", "Seat"],
     "correct": "Suzuki",
     "difficulty": 5,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/suzuki.png"
   },
   {
@@ -188,7 +188,7 @@
     "options": ["Lincoln", "Lotus", "Land Rover", "Lada", "Lancia", "Lucid"],
     "correct": "Lexus",
     "difficulty": 5,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/lexus.png"
   },
   {
@@ -196,7 +196,7 @@
     "options": ["Mitsubishi", "Scion", "Lancia", "Chevrolet", "Fiat", "Renault"],
     "correct": "Subaru",
     "difficulty": 5,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/subaru.png"
   },
   {
@@ -204,7 +204,7 @@
     "options": ["Chrysler", "Chevrolet", "Chery", "Maserati", "Aston Martin", "Rolls-Royce"],
     "correct": "Cadillac",
     "difficulty": 6,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/cadillac.png"
   },
   {
@@ -212,7 +212,7 @@
     "options": ["Lexus", "Lancia", "Land Rover", "Lincoln", "Lotus", "Lamborghini"],
     "correct": "Lada",
     "difficulty": 6,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/lada.png"
   },
   {
@@ -220,7 +220,7 @@
     "options": ["Bentley", "Chrysler", "Aston Martin", "Genesis", "Rolls-Royce", "Land Rover"],
     "correct": "Mini",
     "difficulty": 6,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/mini.png"
   },
   {
@@ -228,7 +228,7 @@
     "options": ["Scania", "Saab", "Suzuki", "Subaru", "Geely", "RUF"],
     "correct": "Sisu",
     "difficulty": 6,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/sisu.png"
   },
   {
@@ -236,7 +236,7 @@
     "options": ["Chrysler", "Bentley", "Alpine", "Jaguar", "Infiniti", "Mini"],
     "correct": "Aston Martin",
     "difficulty": 7,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/astonmartin.png"
   },
   {
@@ -244,7 +244,7 @@
     "options": ["Rover", "Rossion", "Renault", "Roewe", "Riley", "Range Rover"],
     "correct": "Rolls-Royce",
     "difficulty": 7,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/rolls-royce.png"
   },
   {
@@ -252,7 +252,7 @@
     "options": ["Tata", "Troller", "Trion", "Tatra", "Tucker", "TVR"],
     "correct": "Tesla",
     "difficulty": 7,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/tesla.png"
   },
   {
@@ -260,7 +260,7 @@
     "options": ["Alfa Romeo", "Hyundai", "Alpina", "Abarth", "Apollo", "Austin"],
     "correct": "Acura",
     "difficulty": 7,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/acura.png"
   },
   {
@@ -268,7 +268,7 @@
     "options": ["Buick", "Pagani", "Panoz", "Dodge", "Cadillac", "Bentley"],
     "correct": "Bugatti",
     "difficulty": 8,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/bugatti.png"
   },
   {
@@ -276,7 +276,7 @@
     "options": ["Bugatti", "Ferrari", "McLaren", "Trion", "Porsche", "Pontiac"],
     "correct": "Maserati",
     "difficulty": 8,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/maserati.png"
   },
   {
@@ -284,7 +284,7 @@
     "options": ["Dacia", "Datsun", "Dodge", "Daihatsu", "Donkervoort", "Acura"],
     "correct": "Daewoo",
     "difficulty": 8,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/daewoo.png"
   },
   {
@@ -292,7 +292,7 @@
     "options": ["Bugatti", "Buick", "Brilliance", "Baojun", "Bristol", "Bertone"],
     "correct": "Bentley",
     "difficulty": 8,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/bentley.png"
   },
   {
@@ -300,7 +300,7 @@
     "options": ["Alpina", "Apollo", "Shelby", "McLaren", "Cadillac", "Maserati"],
     "correct": "Abarth",
     "difficulty": 9,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/abarth.png"
   },
   {
@@ -308,7 +308,7 @@
     "options": ["Porsche", "Pagani", "Panoz", "Vauxhall", "Abarth", "Infiniti"],
     "correct": "Pontiac",
     "difficulty": 9,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/pontiac.png"
   },
   {
@@ -316,7 +316,7 @@
     "options": ["Venuxia", "Venturi", "VLF", "Vector", "Vencer", "Vandenbrink"],
     "correct": "Vauxhall",
     "difficulty": 9,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/vauxhall.png"
   },
   {
@@ -324,7 +324,7 @@
     "options": ["Isuzu", "Iveco", "Daewoo", "Chery", "Pontiac", "Genesis"],
     "correct": "Infiniti",
     "difficulty": 9,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/infiniti.png"
   },
   {
@@ -332,7 +332,7 @@
     "options": ["Genesis", "Chrysler", "Saturn", "Mazzanti", "Shelby", "Intermeccanica"],
     "correct": "Buick",
     "difficulty": 10,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/buick.png"
   },
   {
@@ -340,7 +340,7 @@
     "options": ["Mazzanti", "Karma", "Trion", "Maserati", "Pagani", "Arrinera"],
     "correct": "Koenigsegg",
     "difficulty": 10,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/koenigsegg.png"
   },
   {
@@ -348,7 +348,7 @@
     "options": ["Mazzanti", "Arrinera", "Pagani", "Bugatti", "Abarth", "Pontiac"],
     "correct": "Panoz",
     "difficulty": 10,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/panoz.png"
   },
   {
@@ -356,456 +356,472 @@
     "options": ["Scion", "Roewe", "Trion", "Yulon", "Zenos", "Kenworth"],
     "correct": "Saturn",
     "difficulty": 10,
-    "category": "Cars",
+    "category": "cars",
     "imageURL": "/categories/cars/saturn.png"
   },
 
   {
     "alias": "jokerit",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Koivukylän Narrit", "Vantaan Klovnit", "Bewe Sport", "HC Giants", "Helsingin Kojootit", "Kiekko-Vantaa"],
     "correct": "Helsingin Jokerit",
     "difficulty": 1,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/jokerit.png"
   },
   {
     "alias": "assat",
-    "options": ["", "", "", "", "", ""],
+    "options": ["RoKi Rovaniemi", "Kajaanin Hokki", "KalPa Kuopio", "TPS Turku", "Kuhmon Kiva", "Sisu Hockey"],
     "correct": "Porin Ässät",
     "difficulty": 1,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/assat.png"
   },
   {
     "alias": "ilves",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Jämsänkosken Ilves", "Helsingin Karhu-Kissat", "Valkeakosken Kiekko-Ahma", "Oulun Kärpät", "Napapiirin Pantterit", "Helsingin Kiekko-Tiikerit"],
     "correct": "Tampereen Ilves",
     "difficulty": 1,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/ilves.png"
   },
   {
     "alias": "tappara",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Kouvolan KooKoo", "Lempäälän Kisa", "Tammerfors Bollklubb", "Tampereen KooVee", "TuTo Hockey", "HPK Hämeenlinna"],
     "correct": "Tampereen Tappara",
     "difficulty": 1,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/tappara.png"
   },
   {
     "alias": "florida-panthers",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Flodira Redcats", "Florida Tigers", "Florida Jaguars", "Florida Lions", "Florida Black Tigers", "Florida Cougars"],
     "correct": "Florida Panthers",
     "difficulty": 1,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/florida-panthers.png"
   },
   {
     "alias": "anaheim-ducks",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Dallas Stars", "San Diego Gulls", "Danville Dashers", "New Jersey Devils", "Orlando Ducks", "HC Davos"],
     "correct": "Anaheim Ducks",
     "difficulty": 1,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/anaheim-ducks.png"
   },
   {
     "alias": "karpat",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Tampereen Ilves", "Valkeakosken Kiekko-Ahma", "Helsingin Karhu-Kissat", "Hernesaaren Näädät", "Hyvinkään Jää-Ahmat", "Kokkolan Hermes"],
     "correct": "Oulun Kärpät",
     "difficulty": 2,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/karpat.png"
   },
   {
     "alias": "calgary-flames",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Carolina Hurricanes", "Charlotte Checkers", "Cleveland Monsters", "Colorado Flames", "Syracuse Crunch", "Vancouver Canucks"],
     "correct": "Calgary Flames",
     "difficulty": 2,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/calgary-flames.png"
   },
   {
     "alias": "colorado-avalanche",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Anaheim Ducks", "Adirondack Thunder", "Allen Americans", "Rochester Americans", "Tri-City Americans", "Milwaukee Admirals"],
     "correct": "Colorado Avalanche",
     "difficulty": 2,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/colorado-avalanche.png"
   },
   {
     "alias": "dallas-stars",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Texas Stars", "Detroit Red Wings", "Anaheim Ducks", "Danville Dashers", "Binghamton Devils", "Ontario Reign"],
     "correct": "Dallas Stars",
     "difficulty": 2,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/dallas-stars.png"
   },
   {
     "alias": "edmonton-oilers",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Pietarinkadun Oilers", "Hydraulic Oilers", "Tulsa Oilers", "Esport Oilers", "New York Oilers", "Philadelphia Oilers"],
     "correct": "Edmonton Oilers",
     "difficulty": 2,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/edmonton-oilers.png"
   },
   {
     "alias": "nashville-predators",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Florida Panthers", "Arizona Coyotes", "Brampton Beast", "Medicine Hat Tigers", "Metallurg Magnitogorsk", "Neftekhimik Nizhnekamsk"],
     "correct": "Nashville Predators",
     "difficulty": 2,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/nashville-predators.png"
   },
   {
     "alias": "jyp",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Mikkelin Jukurit", "KeuPa HT", "Joensuun Kiekko-Pojat", "Helsingin Jokerit", "Juuan Palloseura", "Carolina Hurricanes"],
     "correct": "JYP Jyväskylä",
     "difficulty": 3,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/jyp.png"
   },
   {
     "alias": "sport",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Heinolan Peliitat", "Adler Mannheim", "EHC Biel", "Colorado Eagles", "Grand Rapid Griffins", "Lahden Pelicans"],
     "correct": "Vaasan Sport",
     "difficulty": 3,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/sport.png"
   },
   {
     "alias": "tampa-bay-lightning",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Rhode Island Storm", "Seattle Storm", "Ottawa Lightning", "Washington Lightning", "Philadelphia Storm", "Columbus Blue Jackets"],
     "correct": "Tampa Bay Lightning",
     "difficulty": 3,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/tampa-bay-lightning.png"
   },
   {
     "alias": "chicago-blackhawks",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Frölunda Indians", "Portland Winterhawks", "Washington Redskins", "London Tomahawks", "Saginaw Spirit", "Spokane Chiefs"],
     "correct": "Chicago Blackhawks",
     "difficulty": 3,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/chicago-blackhawks.png"
   },
   {
     "alias": "pittsburgh-penguins",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Krefeld Pinguine", "Pirkkalan Pingviinit", "Fischtown Pinguins", "Wilkes-Barre/Scranton Penguins", "Carolina Thunderbirds", "HC Slovan Bratislava"],
     "correct": "Pittsburgh Penguins",
     "difficulty": 3,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/pittsburgh-penguins.png"
   },
   {
     "alias": "montreal-canadiens",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Vancouver Canucks", "Carolina Hurricanes", "Calgary Flames", "Cleveland Monsters", "Charlotte Checkers", "Utica Comets"],
     "correct": "Montreal Canadiens",
     "difficulty": 3,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/montreal-canadiens.png"
   },
   {
     "alias": "minnesota-wild",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Grizzlys Wolfsburg", "Dinamo Minsk", "Utah Grizzlies", "Iisalmen Peli-Karhut", "Hershey Bears", "Charlotte Checkers"],
     "correct": "Minnesota Wild",
     "difficulty": 4,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/minnesota-wild.png"
   },
   {
     "alias": "jukurit",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Admiral Vladivostok", "SKA Saint Petersburg", "Växjö Lakers", "Dusseldorfer EG", "EHC Biel", "London Knights"],
     "correct": "Mikkelin Jukurit",
     "difficulty": 4,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/jukurit.png"
   },
   {
     "alias": "los-angeles-kings",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Los Angeles Dodgers", "Los Angeles Royals", "Los Angeles Clippers", "Los Angeles Buccaneers", "Los Angeles Marlies", "Los Angeles Reign"],
     "correct": "Los Angeles Kings",
     "difficulty": 4,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/los-angeles-kings.png"
   },
   {
     "alias": "detroit-red-wings",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Kunlun Red Star", "Carolina Thunderbirds", "Kalamazoo Wings", "Örebro HK", "Lausanne HC", "Belleville Senators"],
     "correct": "Detroit Red Wings",
     "difficulty": 4,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/detroit-red-wings.png"
   },
   {
     "alias": "carolina-hurricanes",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Montreal Canadiens", "Lethbridge Hurricanes", "Washington Capitals", "Laval Rocket", "Rochester Americans", "Utica Comets"],
     "correct": "Carolina Hurricanes",
     "difficulty": 4,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/carolina-hurricanes.png"
   },
   {
     "alias": "boston-bruins",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Providence Bruins", "Belleville Senators", "Buffalo Sabres", "Brynäs IF", "Barys Nur Sultan", "Barrie Colts"],
     "correct": "Boston Bruins",
     "difficulty": 4,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/boston-bruins.png"
   },
   {
     "alias": "lukko",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Rögle BK", "Rapperswil-Jona Lakers", "Laval Rocket", "Raision Lapa", "Lokomotiv Yaroslavl", "Luleå HF"],
     "correct": "Rauman Lukko",
     "difficulty": 5,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/lukko.png"
   },
   {
     "alias": "buffalo-sabres",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Neftekhimik Nizhnekamsk", "Dinamo Minsk", "HV71", "Eisbären Berlin", "HC Ambri-Piotta", "EHC Red Bull Munchen"],
     "correct": "Buffalo Sabres",
     "difficulty": 5,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/buffalo-sabres.png"
   },
   {
     "alias": "ottawa-senators",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Salavat Yulaev Ufa", "HC Yugra", "Linköpings HC", "Stockton Heat", "EV Zug", "North Bay Battalion"],
     "correct": "Ottawa Senators",
     "difficulty": 5,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/ottawa-senators.png"
   },
   {
     "alias": "vancouver-canucks",
-    "options": ["", "", "", "", "", ""],
+    "options": ["San Jose Sharks", "San Jose Barracuda", "Mississauga Steelheads", "Guelph Storm", "HC Davos", "Kölner Haie"],
     "correct": "Vancouver Canucks",
     "difficulty": 5,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/vancouver-canucks.png"
   },
   {
     "alias": "winnipeg-jets",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Milwaukee Admirals", "Utica Comets", "Oshawa Generals", "Windsor Spitfires", "Laval Rocket", "ERC Ingolstadt"],
     "correct": "Winnipeg Jets",
     "difficulty": 5,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/winnipeg-jets.png"
   },
   {
     "alias": "philadelphia-flyers",
-    "options": ["", "", "", "", "", ""],
+    "options": ["HC Vityaz", "Rapid City Rush", "Regina Pats", "Lehigh Valley Phantoms", "Providence Bruins", "Detroit Red Wings"],
     "correct": "Philadelphia Flyers",
     "difficulty": 5,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/philadelphia-flyers.png"
   },
   {
     "alias": "columbus-blue-jackets",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Dallas Stars", "Texas Stars", "Sibir Novosibirsk Oblast", "Kunlun Red Star", "Leksands IF", "AIK IF"],
     "correct": "Columbus Blue Jackets",
     "difficulty": 6,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/columbus-blue-jackets.png"
   },
   {
     "alias": "san-jose-sharks",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Admiral Vladivostok", "Mentor Ice Breakers", "San Jose Barracuda", "Växjö Lakers", "Kölner Haie", "Seattle Blacksharks"],
     "correct": "San Jose Sharks",
     "difficulty": 6,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/san-jose-sharks.png"
   },
   {
     "alias": "vegas-golden-knights",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Henderson Silver Knights", "London Knights", "Ontario Reign", "Victoria Royals", "Skellefteå AIK", "Jacksonville IceMen"],
     "correct": "Vegas Golden Knights",
     "difficulty": 6,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/vegas-golden-knights.png"
   },
   {
     "alias": "st-louis-blues",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Toronto Maple Leafs", "HC Dynamo Moscow", "Färjestads BK", "Adler Mannheim", "Lausanne HC", "New York Rangers"],
     "correct": "St. Louis Blues",
     "difficulty": 6,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/st-louis-blues.png"
   },
   {
     "alias": "new-jersey-devils",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Binghamton Devils", "New York Islanders", "New York Rangers", "New York Jets", "New Jersey Titans", ""],
     "correct": "New Jersey Devils",
     "difficulty": 6,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/new-jersey-devils.png"
   },
   {
     "alias": "arizona-coyotes",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Amur Khabarovsk", "Metallurg Magnitogorsk", "Avangard Omsk", "Tucson Roadrunners", "Prince George Cougars", "Lehigh Valley Phantoms"],
     "correct": "Arizona Coyotes",
-    "difficulty": 7,
-    "category": "Ice Hockey",
+    "difficulty": 6,
+    "category": "icehockey",
     "imageURL": "/categories/hockey/arizona-coyotes.png"
   },
   {
+    "alias": "koovee",
+    "options": ["Kiekko-Vantaa", "KalPa Kuopio", "KeuPa HT", "Kajaanin Hokki", "Kokkolan Hermes", "Imatran Ketterä"],
+    "correct": "Tampereen KooVee",
+    "difficulty": 7,
+    "category": "icehockey",
+    "imageURL": "/categories/hockey/koovee.png"
+  },
+  {
     "alias": "frolunda-indians",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Chicago Blackhawks", "Severstal Cherepovets", "HC Sochi", "Rögle BK", "Adler Mannheim", "Portland Winterhawks"],
     "correct": "Frölunda Indians",
     "difficulty": 7,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/frolunda-indians.png"
   },
   {
     "alias": "cska-moscow",
-    "options": ["", "", "", "", "", ""],
+    "options": ["SKA Saint Petersburg", "Ak Bars Kazan", "HC Slovan Bratislava", "HC Spartak Moscow", "HC Vityaz", "Sibir Novosibirsk Oblast"],
     "correct": "CSKA Moscow",
     "difficulty": 7,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/cska-moscow.png"
   },
   {
     "alias": "brynas-if",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Bolidens FFI", "Leksands IF", "AIK IF", "Skellefteå AIK", "Färjestads BK", "Luleå HF"],
     "correct": "Brynäs IF",
     "difficulty": 7,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/brynas-if.png"
   },
   {
-    "alias": "amur-khabarovsk",
-    "options": ["", "", "", "", "", ""],
-    "correct": "Amur Khabarovsk",
+    "alias": "espoo-united",
+    "options": ["ERC Ingolstadt", "Eisbären Berlin", "EHC Red Bull Munchen", "Edmonton Oil Kings", "EHC Biel", "EV Zug"],
+    "correct": "Espoo United",
     "difficulty": 7,
-    "category": "Ice Hockey",
+    "category": "icehockey",
+    "imageURL": "/categories/hockey/espoo-united.png"
+  },
+  {
+    "alias": "amur-khabarovsk",
+    "options": ["Bridgeport Sound Tigers", "Medicine Hat Tigers", "HC Lugano", "SCL Tigers", "Straubing Tigers", "Neftekhimik Nizhnekamsk", "HC Sochi"],
+    "correct": "Amur Khabarovsk",
+    "difficulty": 8,
+    "category": "icehockey",
     "imageURL": "/categories/hockey/amur-khabarovsk.png"
   },
   {
     "alias": "dinamo-riga",
-    "options": ["", "", "", "", "", ""],
+    "options": ["HC Dynamo Moscow", "Dinamo Minsk", "Dusseldorfer EG", "Adler Mannheim", "HC Davos", "Binghamton Devils"],
     "correct": "Dinamo Riga",
     "difficulty": 8,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/dinamo-riga.png"
   },
   {
     "alias": "metallurg-magnitogorsk",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Traktor Chelyabinsk", "Ak Bars Kazan", "Barys Nur Sultan", "Avangard Omsk", "Torpedo Nizhny Novgorod", "Neftekhimik Nizhnekamsk"],
     "correct": "Metallurg Magnitogorsk",
     "difficulty": 8,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/metallurg-magnitogorsk.png"
   },
   {
     "alias": "sapko",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Imatran Ketterä", "Kokkolan Hermes", "Kajaanin Hokki", "RoKi Rovaniemi", "Lempäälän Kisa", "KeuPa HT"],
     "correct": "Savonlinnan Pallokerho (SaPKo)",
     "difficulty": 8,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/sapko.png"
   },
   {
     "alias": "toronto-marlies",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Toronto Maple Leafs", "Victoria Royals", "Manchester Monarchs", "Reading Royals", "Edmonton Oil Kings", "Rochester Americans"],
     "correct": "Toronto Marlies",
     "difficulty": 8,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/toronto-marlies.png"
   },
   {
     "alias": "lokomotiv-yaroslavl",
-    "options": ["", "", "", "", "", ""],
+    "options": ["HC Lada Togliatti", "Avtomobilist Yekaterinburg", "Admiral Vladivostok", "Avangard Omsk", "Amur Khabarovsk", "Salavat Yulaev Ufa"],
     "correct": "Lokomotiv Yaroslavl",
     "difficulty": 8,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/lokomotiv-yaroslavl.png"
   },
   {
     "alias": "hc-sochi",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Neftekhimik Nizhnekamsk", "HC Slovan Bratislava", "HC Yugra", "HC Spartak Moscow", "CSKA Moscow", "Ak Bars Kazan"],
     "correct": "HC Sochi",
     "difficulty": 9,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/hc-sochi.png"
   },
   {
     "alias": "dinamo-minsk",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Barys Nur Sultan", "Traktor Chelyabinsk", "Severstal Cherepovets", "EV Zug", "Linköpings HC", "Luleå HF", "SC Bern"],
     "correct": "Dinamo Minsk",
     "difficulty": 9,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/dinamo-minsk.png"
   },
   {
-    "alias": "avtomobilist-ekaterinburg",
-    "options": ["", "", "", "", "", ""],
-    "correct": "Avtomobilist Ekaterinburg",
+    "alias": "avtomobilist-yekaterinburg",
+    "options": ["Atlanta Gladiators", "Admiral Vladivostok", "Avangard Omsk", "Amur Khabarovsk", "Ak Bars Kazan", "Adler Mannheim", "AIK IF"],
+    "correct": "Avtomobilist Yekaterinburg",
     "difficulty": 9,
-    "category": "Ice Hockey",
-    "imageURL": "/categories/hockey/avtomobilist-ekaterinburg.png"
+    "category": "icehockey",
+    "imageURL": "/categories/hockey/avtomobilist-yekaterinburg.png"
   },
   {
     "alias": "chicago-wolves",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Brampton Beast", "Elmira Jackals", "Sudbury Wolves", "Watertown Wolves", "HC Lugano", "Hartford Wolf Pack"],
     "correct": "Chicago Wolves",
     "difficulty": 9,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/chicago-wolves.png"
   },
   {
     "alias": "barys-nur-sultan",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Ak Bars Kazan", "Traktor Chelyabinsk", "Severstal Cherepovets", "HC Yugra", "HC Vityaz", "Torpedo Nizhny Novgorod"],
     "correct": "Barys Nur-Sultan",
     "difficulty": 9,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/barys-nur-sultan.png"
   },
   {
     "alias": "avangard-omsk",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Flint Firebirds", "Springfield Thunderbirds", "Grand Rapid Griffins", "Bakersfield Condors", "HC Slovan Bratislava", "Barys Nur Sultan"],
     "correct": "Avangard Omsk",
     "difficulty": 10,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/avangard-omsk.png"
   },
   {
     "alias": "severstal-cherepovets",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Traktor Chelyabinsk", "Sibir Novosibirsk Oblast", "Salavat Yulaev Ufa", "HC Vityaz", "Lokomotiv Yaroslavl", "Metallurg Magnitogorsk"],
     "correct": "Severstal Cherepovets",
     "difficulty": 10,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/severstal-cherepovets.png"
   },
   {
     "alias": "slovan-bratislava",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Avangard Omsk", "San Diego Gulls", "HC Fribourg-Gottéron", "Iserlohn Roosters", "Springfield Thunderbirds", "HC Dynamo Moscow"],
     "correct": "HC Slovan Bratislava",
     "difficulty": 10,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/slovan-bratislava.png"
   },
   {
     "alias": "torpedo-nizhny-novgorod",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Manitoba Moose", "Neftekhimik Nizhnekamsk", "Avtomobilist Yekaterinburg", "Metallurg Magnitogorsk", "ERC Ingolstadt", "Lausanne HC"],
     "correct": "Torpedo Nizhny Novgorod",
     "difficulty": 10,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/torpedo-nizhny-novgorod.png"
   },
   {
     "alias": "traktor-chelyabinsk",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Amur Khabarovsk", "Neftekhimik Nizhnekamsk", "HC Yugra", "Barys Nur Sultan", "Ak Bars Kazan", "Severstal Cherepovets"],
     "correct": "Traktor Chelyabinsk",
     "difficulty": 10,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/traktor-chelyabinsk.png"
   },
   {
     "alias": "salavat-yulaev-ufa",
-    "options": ["", "", "", "", "", ""],
+    "options": ["Hc Vityaz", "Admiral Vladivostok", "Avtomobilist Yekaterinburg", "Ak Bars Kazan", "Lokomotiv Yaroslavl", "Sibir Novosibirsk Oblast"],
     "correct": "Salavat Yulaev Ufa",
     "difficulty": 10,
-    "category": "Ice Hockey",
+    "category": "icehockey",
     "imageURL": "/categories/hockey/salavat-yulaev-ufa.png"
   }
 ]

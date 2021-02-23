@@ -7,11 +7,12 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Typography from '@material-ui/core/Typography';
 
-import DoneIcon from '@material-ui/icons/Done';
+import DoneIcon from '@material-ui/icons/CheckCircleOutline';
 import Remove2Icon from '@material-ui/icons/ExposureNeg2';
 import RedoIcon from '@material-ui/icons/Redo';
 
 import ProgressBar from './ProgressBar';
+import Recap from './Recap';
 
 const StartScreen = (props) => {
   const { t, title, description, handleStart } = props;
@@ -39,78 +40,109 @@ const StartScreen = (props) => {
 
 const Game = (props) => {
   const { game, questions } = props;
+  const TIME = 10000;
+
   const [ t, i18n ] = useTranslation();
+  const [ initialLoad, setInitialLoad ] = useState(true);
   const [ playing, setPlaying ] = useState(false);
   const [ score, setScore ] = useState(0);
   const [ addedPoints, setAddedPoints ] = useState(0);
   const [ currentQuestion, setCurrentQuestion ] = useState(null);
   const [ round, setRound ] = useState(1);
-  const [ timeLeft, setTimeLeft ] = useState(10000);
+  const [ timeLeft, setTimeLeft ] = useState(TIME);
   const [ timeRunning, setTimeRunning ] = useState(false);
   const [ percent, setPercent ] = useState(1);
   const [ lifelinesUsed, setLifelinesUsed ] = useState({
     fiftyfifty: false,
     skip: false
   });
+  const [ endReason, setEndReason ] = useState({
+    wrongAnswer: false,
+    finish: false,
+    timeout: false,
+    userQuit: false
+  });
   const [ hide, setHide ] = useState(false);
+  const [ showCorrect, setShowCorrect ] = useState(false);
 
   const buttonClasses = {
     correct: 'correct-choice',
     wrong: 'wrong-choice'
   };
 
-  
+  /*
+    Playing around here a little because timer progress bar has 0.4 sec transition
+    and if user clicks an answer just before timer seems to run out the actual timeLeft
+    value is already 0 and game is over and may confuse the user who is like:
+    "I'm sure there was some time left!?"
+  */
   useEffect(() => {
-    // console.log(timeLeft)
-    setPercent(calculatePercent());
-  }, [ timeLeft ])
+    const calculateTimeLeft = () => {
+      return timeLeft > -400 ? timeLeft - 200 : 0;
+    }
   
+    const calculatePercent = () => {
+      return (timeLeft < 0 ? 0 : timeLeft) / TIME;
+    }
+
+    setPercent(calculatePercent());    
+    const timer = setTimeout(() => {
+      if (playing && timeRunning) setTimeLeft(calculateTimeLeft());
+    }, 200)
+    return () => clearTimeout(timer);
+
+  }, [playing, timeRunning, timeLeft])
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (playing && timeRunning) setTimeLeft(calculateTimeLeft())
-    }, 200)
-    return () => clearTimeout(timer)   
-  })
+    if (timeLeft < -200 && timeRunning) {
+      setAddedPoints(0);
+      setTimeRunning(false);
+      setEndReason({ ...endReason, timeout: true });
+      setShowCorrect(true);
+      setTimeout(() => {
+        onHandleGameEnd()
+      }, 2000)
+    }
+  }, [timeLeft, endReason, timeRunning])
 
   const onHandleGameStart = () => {
-    pickRandomQuestion(round);
+    setRound(1);
+    pickRandomQuestion(1);
     setScore(0);
     setLifelinesUsed({ fiftyfifty: false, skip: false });
-    setTimeLeft(10000);
+    setShowCorrect(false);
+    setTimeLeft(TIME);
     setPlaying(true);
     setTimeRunning(true);
+    setEndReason({ wrongAnswer: false, finish: false, timeout: false, userQuit: false })
+    setInitialLoad(false);
   }
 
   const onHandleGameEnd = () => {
+    setHide(false);
     setPlaying(false);
-    setRound(1);
+    
   }
 
-  const onChooseRight = (e) => {
-    if (e.target.localName === 'span')
-      e.target.parentElement.classList.add(buttonClasses.correct);
-    else
-      e.target.classList.add(buttonClasses.correct);
-
+  const onChooseRight = () => {
+    setShowCorrect(true)
     const countPoints = calculatePositiveScore();
     setAddedPoints(countPoints)
     setTimeout(() => {
-      e.target.classList.remove(buttonClasses.correct);
-      e.target.parentElement.classList.remove(buttonClasses.correct);
+      setShowCorrect(false)
       if (round !== 10) {
         setHide(false);
         pickRandomQuestion(round + 1);
         setScore(score + countPoints)
         setRound(round + 1);
-        setTimeLeft(10000);
+        setTimeLeft(TIME);
         setTimeRunning(true);
       } else {
         setScore(score + countPoints)
+        setEndReason({ ...endReason, finish: true })
         onHandleGameEnd();
       }
-    }, 1500)
-    
+    }, 1500)    
   }
 
   const onChooseWrong = (e) => {
@@ -121,24 +153,28 @@ const Game = (props) => {
 
     const countPoints = calculateNegativeScore();
     setAddedPoints(countPoints)
+    setShowCorrect(true);
+    setEndReason({ ...endReason, wrongAnswer: true })
     setTimeout(() => {
       e.target.classList.remove(buttonClasses.wrong);
       e.target.parentElement.classList.remove(buttonClasses.wrong);
-      setScore(score + addedPoints)
+      setScore(score + countPoints)
       onHandleGameEnd();
     }, 1500)
   }
 
   const onHandleSkip = () => {
     setAddedPoints(score < 500 ? -score : -500);
+    setShowCorrect(true);
     setTimeout(() => {
       pickRandomQuestion(round + 1);
       setLifelinesUsed({ ...lifelinesUsed, skip: true });
       setScore(score < 500 ? 0 : score - 500);
       setRound(round + 1);
-      setTimeLeft(10000);
+      setShowCorrect(false);
+      setTimeLeft(TIME);
       setTimeRunning(true);
-    }, 750)
+    }, 1500)
   }
 
   const onHandleRemoveTwo = () => {
@@ -146,12 +182,12 @@ const Game = (props) => {
     setLifelinesUsed({ ...lifelinesUsed, fiftyfifty: true });
   }
 
-  const calculateTimeLeft = () => {
-    return timeLeft !== 0 ? timeLeft - 200 : 0;
-  }
-
-  const calculatePercent = () => {
-    return timeLeft / 10000;
+  const onHandleUserQuit = () => {
+    setEndReason({ ...endReason, userQuit: true });
+    setShowCorrect(true);
+    setTimeout(() => {
+      onHandleGameEnd();
+    }, 1500)    
   }
 
   // Minimum score for a correct answer is 100 points
@@ -224,7 +260,10 @@ const Game = (props) => {
                     <Button
                       className="q-button"
                       variant="outlined"
-                      style={{ visibility: `${hide && currentQuestion.hide.includes(option) ? 'hidden' : 'visible'}` }}
+                      style={{
+                        visibility: `${hide && currentQuestion.hide.includes(option) ? 'hidden' : 'visible'}`,
+                        backgroundColor: `${option === currentQuestion.correct && showCorrect ? 'rgb(0, 158, 0)' : 'rgba(65, 60, 60, 0.6)'}`
+                      }}
                       onClick={(e) => {
                         if (timeRunning) {
                           setTimeRunning(false);
@@ -277,6 +316,14 @@ const Game = (props) => {
               className="lifeline-btn"
               startIcon={<DoneIcon />}
               variant="outlined"
+              disabled={score <= 0}
+              onClick={() => {
+                if (timeRunning) {
+                  setAddedPoints(0)
+                  setTimeRunning(false);
+                  onHandleUserQuit();
+                }
+              }}
             >
               {t('game.endHere')}
             </Button>
@@ -287,6 +334,13 @@ const Game = (props) => {
             <ProgressBar percent={percent}/>
           </Col>
         </Row>
+        <Typography
+          style={{
+            display: `${endReason.timeout ? 'block' : 'none'}`
+          }}
+        >
+          Aika loppui
+        </Typography>
       </Container>
     );
   }
@@ -296,11 +350,18 @@ const Game = (props) => {
       {
         playing ?
         renderGame() :
+        initialLoad ?
         <StartScreen
           title={game.title[i18n.language]}
           description={game.description[i18n.language]}
           handleStart={onHandleGameStart}
-          t={t} />
+          t={t} /> :
+        <Recap
+          round={round}
+          score={score}
+          handleStart={onHandleGameStart}
+          endReason={endReason}
+        />
       }
     </div>
   );

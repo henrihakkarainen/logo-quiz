@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 
-import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Typography from '@material-ui/core/Typography';
 
@@ -19,7 +18,7 @@ const Loading = ({ t }) => {
       <Typography variant="body1">
         {t('game.loading')}
       </Typography>
-    </div>    
+    </div>
   );
 }
 

@@ -14,7 +14,6 @@ const Category = (props) => {
       <Card.Img
         src={props.bgUrl ? `http://localhost:8080${props.bgUrl}` : placeholder}
       />
-
       <Card.Body>
         <Card.Title>{props.title[i18n.language]}</Card.Title>
         <Card.Text>{props.description[i18n.language]}</Card.Text>
@@ -24,7 +23,7 @@ const Category = (props) => {
           <LinkContainer to={`/play?category=${props.alias}`}>
             <Card.Link>Play</Card.Link>
           </LinkContainer>
-          <LinkContainer to="/highscores">
+          <LinkContainer to={`/highscores?category=${props.alias}`}>
             <Card.Link>High scores</Card.Link>
           </LinkContainer>
         </ListGroupItem>

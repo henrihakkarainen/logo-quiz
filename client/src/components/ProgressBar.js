@@ -17,7 +17,8 @@ const ProgressBar = (props) => {
         className="progress"
         style={{
           width: `${value}%`,
-          transition: `${value === 100 ? '' : '0.4s ease'}`
+          transition: `${value === 100 ? '' : '0.4s ease'}`,
+          backgroundColor: `${percent > 0.34 ? 'rgb(62, 122, 235)' : 'rgb(255, 0, 0)'}`
         }}
       />
     </div>

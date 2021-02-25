@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
-import axios from 'axios';
+import axios from '../config/axiosConfig';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Typography from '@material-ui/core/Typography';
@@ -43,7 +43,7 @@ const Play = () => {
   const [ loading, setLoading ] = useState(true);
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/api/categories/published?title=${category}`)
+    axios.get(`/categories/published?title=${category}`)
       .then(res => {
         setGame(res.data[0])
       })
@@ -51,7 +51,7 @@ const Play = () => {
 
   useEffect(() => {
     if (game) {
-      axios.get(`http://localhost:8080/api/questions?category=${game.alias}`)
+      axios.get(`/questions?category=${game.alias}`)
         .then(res => {
           setGameData(res.data)
           setLoading(false)

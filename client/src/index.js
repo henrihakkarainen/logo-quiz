@@ -9,11 +9,9 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <I18nextProvider i18n={i18n}>
-      <App />
-    </I18nextProvider>
-  </React.StrictMode>,
+  <I18nextProvider i18n={i18n}>
+    <App />
+  </I18nextProvider>,
   document.getElementById('root')
 );
 

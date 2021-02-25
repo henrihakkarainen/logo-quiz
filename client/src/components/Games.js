@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import axios from 'axios';
+import axios from '../config/axiosConfig';
 import Category from './Category';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -12,9 +12,8 @@ const Games = (props) => {
   const [ categoryList, setCategoryList ] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/api/categories/published')
+    axios.get('/categories/published')
       .then((res) => {
-        console.log(res.data)
         setCategoryList(res.data);
       })
   }, [])

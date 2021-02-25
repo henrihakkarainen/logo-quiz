@@ -1,34 +1,47 @@
 .language-selection {
-  margin: 30vh auto;
+  margin: 5vh auto;
   text-align: center;
   border: 0.5px solid black;
   border-radius: 10px;
-  width: 40%;
-  height: 300px;
+  width: 90%;
+  height: 100%;
   color: white;
-  background-color: rgb(0, 0, 0, 0.7);
+  background-color: rgb(0, 0, 0, 0.75);
+  padding: 20px 18px;
+}
+
+.language-selection h1 {
+  font-size: 1.8rem;
 }
 
 .language-selection h3 {
-  font-size: 22px;
+  margin-top: 30px;
+  font-size: 1.1rem;
 }
 
 .language-selection ul {
   list-style-type: none;
-  padding: 0px;
+  padding: 0;
+  margin: 15px 0 0;
 }
 
 .language-button {
-  width: 35%;
+  width: 100%;
   display: flex;
   align-items: center;
   border: none;
   border-radius: 15px;
   margin: 5px auto;
   height: 50px;
-  font-size: 18px;
+  font-size: 1.1rem;
+  font-weight: 500;
   background-color: rgb(245, 245, 245, 0.9);
   cursor: pointer;
+}  
+
+.language-button img {
+  height: 90%;
+  padding-right: 5px;
 }
 
 .language-button:hover {
@@ -37,12 +50,49 @@
   border: 1px solid white;
 }
 
-.language-button img {
-  width: 30%;
-  padding-right: 5px;
-}
-
 .language-button:focus, .language-button:active {
   outline: none;
   box-shadow: none;
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .language-selection {
+    margin: 15vh auto;
+    width: 75%;
+    padding: 30px 20px;
+  }
+
+  .language-selection h1 {
+    font-size: 2rem;
+  }
+  
+  .language-selection h3 {
+    font-size: 1.2rem;
+  }
+  
+  .language-button {
+    width: 240px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .language-selection {
+    margin: 25vh auto;
+    width: 60%;
+    padding: 30px 20px;
+  }
+
+  .language-selection h1 {
+    font-size: 2.4rem;
+  }
+  
+  .language-selection h3 {
+    font-size: 1.35rem;
+  }
+  
+  .language-button {
+    width: 250px;
+    font-size: 1.15rem;
+  }
 }

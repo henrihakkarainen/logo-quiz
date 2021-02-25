@@ -6,7 +6,6 @@ const LanguageSelection = (props) => {
   return (
     <div className="language-selection">
       <h1>Welcome to Logo Quiz</h1>
-      <br />
       <h3>Please, select your language</h3>
       <ul>
         <li>

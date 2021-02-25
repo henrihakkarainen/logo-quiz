@@ -1,16 +1,16 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Container from 'react-bootstrap/Container';
 
-import './App.css';
-import 'react-responsive-modal/styles.css';
 import LanguageSelection from './components/LanguageSelection';
 import Navigation from './components/Navigation';
-import Home from './components/Home';
-import Games from './components/Games';
-import Play from './components/Play';
 import Modal from './components/ModalForm';
+
+import routes from './config/routeConfig';
+
+import './App.css';
+// import 'react-responsive-modal/styles.css';
 
 const App = () => {
   const [ language, setLanguage ] = useState(localStorage.getItem('language'));
@@ -28,20 +28,21 @@ const App = () => {
 
   if (language === 'fi' || language === 'en') {
     return (
-      <>
       <Router>
         <Container>
           <Navigation lang={language}
                       openLoginForm={onOpenLogin}
                       onChangeLanguage={onChangeLanguage}
                       router={Router.router} />
-          <Route path="/" exact component={Home} />
-          <Route path="/games" component={Games} />
-          <Route path="/play" component={Play} />
+          <Switch>
+            {routes.map(route => 
+              <Route key={route.path} { ...route } />
+            )}
+          </Switch>
+
+          <Modal show={showLogin} onHide={onCloseLogin} />
         </Container>
       </Router>
-      <Modal show={showLogin} onHide={onCloseLogin} />
-      </>
     )
   } else {
     return (

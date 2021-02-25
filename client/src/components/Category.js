@@ -12,7 +12,7 @@ const Category = (props) => {
   return (
     <Card border="dark">
       <Card.Img
-        src={props.bgUrl ? `http://localhost:8080${props.bgUrl}` : placeholder}
+        src={props.bgUrl ? props.bgUrl : placeholder}
       />
       <Card.Body>
         <Card.Title>{props.title[i18n.language]}</Card.Title>

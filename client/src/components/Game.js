@@ -250,7 +250,7 @@ const Game = (props) => {
         </Row>
         <Row className="logo-and-questions">
           <Col sm={12} md={6}>
-            <img className="game-logo" src={`http://localhost:8080${currentQuestion.imageURL}`} alt="logo" />
+            <img className="game-logo" src={currentQuestion.imageURL} alt="logo" />
           </Col>
           <Col sm={12} md={6} style={{ margin: 'auto' }}>
             {

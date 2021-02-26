@@ -43,7 +43,7 @@ const Play = () => {
   const [ loading, setLoading ] = useState(true);
 
   useEffect(() => {
-    axios.get(`/categories/published?title=${category}`)
+    axios.get(`/categories/published?alias=${category}`)
       .then(res => {
         setGame(res.data[0])
       })

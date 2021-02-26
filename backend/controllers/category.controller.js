@@ -45,9 +45,9 @@ const create = async (req, res) => {
 }
 
 const findAll = async (req, res) => {
-  const { title } = req.query;
-  const query = { 'alias': { $regex: new RegExp(`^${title}$`), $options: 'i' } }
-  const condition = title ? query : {}
+  const { alias } = req.query;
+  const query = { 'alias': { $regex: new RegExp(`^${alias}$`), $options: 'i' } }
+  const condition = alias ? query : {}
   
   try {
     const data = await Category.find(condition);
@@ -79,14 +79,14 @@ const findOne = async (req, res) => {
 }
 
 const findPublished = async (req, res) => {
-  const { title } = req.query;
+  const { alias } = req.query;
   const query = {
     $and: [    
-      { 'alias': { $regex: new RegExp(`^${title}$`), $options: 'i' } },      
+      { 'alias': { $regex: new RegExp(`^${alias}$`), $options: 'i' } },      
       { published: true }
     ]
   }
-  const condition = title ? query : { published: true }
+  const condition = alias ? query : { published: true }
 
   try {
     const data = await Category.find(condition).exec();

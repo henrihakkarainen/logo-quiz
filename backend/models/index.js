@@ -28,7 +28,8 @@ const db = {
   connectDB,
   question: require('./question.model'),
   category: require('./category.model'),
-  user: require('./user.model')
+  user: require('./user.model'),
+  highscores: require('./highscore.model')
 };
 
 module.exports = db;

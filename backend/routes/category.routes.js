@@ -2,6 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 const CategoryController = require('../controllers/category.controller');
+const HighscoreController = require('../controllers/highscore.controller');
 const { auth } = require('../middleware');
 
 router
@@ -10,6 +11,10 @@ router
   .post(CategoryController.create)
   .get(CategoryController.findAll)
   .delete(CategoryController.removeAll)
+
+router
+  .route('/highscores')
+  .get(HighscoreController.findAll)
 
 router
   .route('/:id([a-f0-9]{24})')
@@ -21,5 +26,11 @@ router
 router
   .route('/published')
   .get(CategoryController.findPublished)
+
+router
+  .route('/:id([a-f0-9]{24})/highscores')
+  .all(auth.verifyToken)
+  .put(HighscoreController.create)
+//.delete(auth.ensureAdmin)
 
 module.exports = router;

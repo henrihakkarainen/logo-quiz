@@ -73,7 +73,7 @@ const findOne = async (req, res) => {
     }
   } catch (err) {
     res.status(500).json({
-      message: err.message | `Error when trying to retrieve Category with id: ${id}`
+      message: err.message || `Error when trying to retrieve Category with id: ${id}`
     });
   }  
 }

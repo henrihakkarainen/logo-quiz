@@ -7,15 +7,15 @@ const User = db.user;
 
 const register = async (req, res) => {
   const { username, email, password } = req.body;
-  if (!username || !email || !password) {
+  if (!username || !password) {
     return res.status(400).json({
-      message: 'Following fields are required: username, email, password'
+      message: 'Following fields are required: username, password'
     });
   }
   try {
     const user = new User({
       username,
-      email,
+      email: email ? email : '',
       password
     });
     const data = await user.save();

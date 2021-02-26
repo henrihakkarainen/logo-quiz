@@ -26,7 +26,7 @@ setupAdmin(config.get('admin'))
     console.log(msg);
   });
 
-// Setup 1 category with questions for the db
+// Setup initial categories and questions
 const createGameData = require('./setup/createdata');
 createGameData()
   .then(msg => {

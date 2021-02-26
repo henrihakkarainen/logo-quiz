@@ -9,4 +9,11 @@ router
   .all(auth.verifyToken, auth.ensureAdmin)
   .get(UserController.findAll)
 
+router
+  .route('/:id([a-f0-9]{24})')
+  .all(auth.verifyToken, auth.ensureSelf)
+  .get(UserController.findOne)
+  .put(UserController.update)
+  .delete(UserController.remove)
+
 module.exports = router;

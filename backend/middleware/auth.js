@@ -49,7 +49,7 @@ const ensureAdmin = async (req, res, next) => {
 const ensureSelf = async (req, res, next) => {
   try {
     const user = await User.findById(req.user.id).exec();
-    if (user && (user.role === 'admin' || user._id === req.params.id)) {
+    if (user && (user.role === 'admin' || user._id == req.params.id)) {
       next();
     } else {
       return res.status(401).json({

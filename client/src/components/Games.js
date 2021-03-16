@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import '../styles/Games.css';
 
 const Games = (props) => {
-  const [ t, i18n ] = useTranslation();
+  const [ t ] = useTranslation();
   const [ categoryList, setCategoryList ] = useState([]);
 
   useEffect(() => {

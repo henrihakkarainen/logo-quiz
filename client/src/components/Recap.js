@@ -16,7 +16,7 @@ import Typography from '@material-ui/core/Typography';
 const Recap = (props) => {
   const { score, round, handleStart, endReason } = props;
 
-  const [ t, i18n ] = useTranslation();
+  const [ t ] = useTranslation();
   const [ loading, setLoading ] = useState(true)
 
   const tableColumns = [

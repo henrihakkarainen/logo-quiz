@@ -1,5 +1,6 @@
 import axios from '../../config/axiosConfig';
 import { SET_USER, LOG_OUT } from '../constants/actionTypes';
+import { closeModal, setModalState } from './appActions';
 
 const setUser = (payload) => {
   return { type: SET_USER, payload };
@@ -10,7 +11,7 @@ export const logoutUser = () => {
 }
 
 export const fetchUser = (payload) => dispatch => {
-  axios.get(`/user/${payload.id}`, {
+  axios.get(`/users/${payload.id}`, {
     headers: {
       'Authorization': `Bearer ${payload.token}`
     }
@@ -20,11 +21,12 @@ export const fetchUser = (payload) => dispatch => {
       username: res.data.username,
       email: res.data.email,
       role: res.data.role
-    }))
+    }));
+    dispatch(closeModal());
   });
 }
 
-export const loginUser = (credentials) => {
+export const loginUser = (credentials) => dispatch => {
   axios.post(
     '/auth/login', JSON.stringify(credentials), {
       headers: {
@@ -34,9 +36,15 @@ export const loginUser = (credentials) => {
   })
   .then(res => {
     localStorage.setItem('token', res.data.token)
-    fetchUser({
+    dispatch(fetchUser({
       id: res.data.id,
       token: res.data.token
-    })
+    }));
+  })
+  .catch(err => {
+    dispatch(setModalState({
+      errorCode: err.response.status,
+      showModalError: true
+    }));
   });
 }

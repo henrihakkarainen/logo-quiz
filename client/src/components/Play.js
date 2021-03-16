@@ -36,8 +36,8 @@ const Play = () => {
     return new URLSearchParams(useLocation().search);
   }
 
-  const [ t, i18n ] = useTranslation();
-  const [ category, setCategory ] = useState(useQuery().get('category'))
+  const [ t ] = useTranslation();
+  const [ category ] = useState(useQuery().get('category'))
   const [ game, setGame ] = useState(null);
   const [ gameData, setGameData ] = useState(null);
   const [ loading, setLoading ] = useState(true);

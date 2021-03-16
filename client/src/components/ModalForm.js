@@ -1,42 +1,16 @@
-import { useState } from 'react';
+import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+
 import Modal from 'react-bootstrap/Modal';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
 
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
+import ForgotPassword from './ForgotPassword';
 
 import '../styles/ModalForm.css';
 
-const Forgot = (props) => {
-  const [ t, i18n ] = useTranslation();
-  return (
-    <div>
-      <Typography>
-        {t('forgotPassword.info')}
-      </Typography>
-      <br />
-      <Typography variant="body2">
-        <Link
-          className="form-link"
-          variant="body2"
-          onClick={() => props.setMode('login')}
-        >
-          {t('forgotPassword.back')}
-        </Link>
-      </Typography>
-    </div>
-  );
-}
-
 const ModalForm = (props) => {
-  const [ t, i18n ] = useTranslation();
-  const [ mode, setMode ] = useState('login');
-
-  const onChangeForm = (view) => {
-    setMode(view);
-  }
+  const [ t ] = useTranslation();
 
   return (
     <Modal
@@ -48,23 +22,29 @@ const ModalForm = (props) => {
     >
       <Modal.Header closeButton>
         <Modal.Title>
-          { mode === 'login' ?
+          { props.mode === 'login' ?
             t('loginBox') :
-            mode === 'register'
+            props.mode === 'register'
             ? t('signup.title')
             : t('forgotPassword.title') }
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        { mode === 'login' ?
-          <LoginForm setMode={onChangeForm} /> :
-          mode === 'register' ?
-          <RegisterForm setMode={onChangeForm} /> :
-          <Forgot setMode={onChangeForm}/>
+        { props.mode === 'login' ?
+          <LoginForm /> :
+          props.mode === 'register' ?
+          <RegisterForm /> :
+          <ForgotPassword />
         }
       </Modal.Body>
     </Modal>
   );
 }
 
-export default ModalForm;
+const mapStateToProps = (state) => {
+  return {
+    mode: state.appReducer.modalMode
+  }
+}
+
+export default connect(mapStateToProps, null)(ModalForm);

@@ -1,5 +1,7 @@
+import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
+import { openModal } from '../store/actions/appActions';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
@@ -55,10 +57,22 @@ const Navigation = (props) => {
                 </Dropdown.Item>           
             </DropdownButton>
           </Dropdown>
-        <Button variant="outline-dark" onClick={props.openLoginForm}>{t('loginBtn')}</Button>
+        <Button variant="outline-dark" onClick={() => props.openModal()}>{t('loginBtn')}</Button>
       </Navbar.Collapse>
     </Navbar>
   )
 }
 
-export default Navigation;
+const mapStateToProps = (state) => {
+  return {
+    user: state.userReducer
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    openModal: () => dispatch(openModal())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navigation);

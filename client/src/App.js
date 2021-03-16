@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import { connect } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { closeModal } from './store/actions/appActions';
+
 import Container from 'react-bootstrap/Container';
 
 import LanguageSelection from './components/LanguageSelection';
@@ -12,9 +15,8 @@ import routes from './config/routeConfig';
 import './App.css';
 // import 'react-responsive-modal/styles.css';
 
-const App = () => {
+const App = (props) => {
   const [ language, setLanguage ] = useState(localStorage.getItem('language'));
-  const [ showLogin, setShowLogin ] = useState(false);
   const [ t, i18n ] = useTranslation();
 
   const onChangeLanguage = (lang) => {
@@ -23,15 +25,11 @@ const App = () => {
     setLanguage(lang);
   }
 
-  const onOpenLogin = () => setShowLogin(true);
-  const onCloseLogin = () => setShowLogin(false);
-
   if (language === 'fi' || language === 'en') {
     return (
       <Router>
         <Container>
           <Navigation lang={language}
-                      openLoginForm={onOpenLogin}
                       onChangeLanguage={onChangeLanguage}
                       router={Router.router} />
           <Switch>
@@ -40,7 +38,10 @@ const App = () => {
             )}
           </Switch>
 
-          <Modal show={showLogin} onHide={onCloseLogin} />
+          <Modal
+            show={props.modal.open}
+            onHide={() => props.closeModal()}
+          />
         </Container>
       </Router>
     )
@@ -51,4 +52,18 @@ const App = () => {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    modal: {
+      open: state.appReducer.showModal
+    }
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    closeModal: () => dispatch(closeModal())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

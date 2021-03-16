@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import { changeModalMode, setModalState } from '../store/actions/appActions';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -12,6 +14,7 @@ import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 
 const RegisterForm = (props) => {
+  const [ t ] = useTranslation();
   const [ username, setUsername ] = useState('');
   const [ usernameError, setUsernameError ] = useState('');
   const [ email, setEmail ] = useState('');
@@ -22,9 +25,13 @@ const RegisterForm = (props) => {
   const [ rePassword, setRePassword ] = useState('');
   const [ rePasswordError, setRePasswordError ] = useState('');
   const [ showRePassword, setShowRePassword ] = useState(false);
-  const [ error, setError ] = useState(false);
-  const [ errorMsg, setErrorMsg ] = useState('Error?');
-  const [ t, i18n ] = useTranslation();
+  const [ errorMsg, setErrorMsg ] = useState('');
+
+  useEffect(() => {
+    if (props.modal.showError) {
+      setErrorMsg('error')
+    }
+  }, [props.modal])
 
   const errorMessages = {
     username: {
@@ -56,8 +63,9 @@ const RegisterForm = (props) => {
       setUsernameError(errorMessages.username.short);
     }
     if (!email) {
-      verifyOk = false;
-      setEmailError(errorMessages.email.required);
+      // verifyOk = false;
+      // setEmailError(errorMessages.email.required);
+      setEmailError('');
     }
     if (email && !email.match(emailRegex)) {
       verifyOk = false;
@@ -94,12 +102,12 @@ const RegisterForm = (props) => {
     const canSubmit = verifyInput();
     if (canSubmit) {
       console.log('sending')
-    } else setError(true)
+    } else props.setErrorState({ showModalError: true })
   }
 
   return (
     <Form>
-      {error ? <Alert variant="danger">{errorMsg}</Alert> : ''}
+      {props.modal.showError ? <Alert variant="danger">{errorMsg}</Alert> : ''}
       <TextField
         label={t('username')}
         style={{ marginBottom: 10 }}
@@ -126,7 +134,7 @@ const RegisterForm = (props) => {
         margin="normal"
         helperText={emailError}
         InputLabelProps={{
-          shrink: true, required: true
+          shrink: true
         }}
         variant="outlined"
         onChange={(e) => {
@@ -206,7 +214,7 @@ const RegisterForm = (props) => {
       <Typography variant="body2">
         {t('signup.haveAccount')}
         &nbsp;
-        <Link className="form-link" variant="body2" onClick={() => props.setMode('login')}>
+        <Link className="form-link" variant="body2" onClick={() => props.changeMode('login')}>
           {t('signup.login')}
         </Link>
       </Typography>
@@ -214,4 +222,20 @@ const RegisterForm = (props) => {
   );
 }
 
-export default RegisterForm;
+const mapStateToProps = (state) => {
+  return {
+    modal: {
+      errorCode: state.appReducer.errorCode,
+      showError: state.appReducer.showModalError
+    }
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changeMode: (mode) => dispatch(changeModalMode(mode)),
+    setErrorState: (payload) => dispatch(setModalState(payload))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(RegisterForm);

@@ -1,9 +1,7 @@
 body {
-  background: url(./images/background/white_bg.jpg) no-repeat center center fixed;
-  background-size: cover;
+  background-color: #A9C9FF;
+  background-image: linear-gradient( 180deg,  rgba(225,109,245,1) 7%, rgba(78,248,231,1) 112% );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   text-align: center !important;
-}
-
-.loginOverlay {
-  background: rgba(36, 123, 160, 0.7);
 }

@@ -1,22 +1,21 @@
 .language-selection {
-  margin: 5vh auto;
+  margin: 10vh auto;
   text-align: center;
-  border: 0.5px solid black;
+  border: 2px solid black;
   border-radius: 10px;
-  width: 90%;
-  height: 100%;
-  color: white;
-  background-color: rgb(0, 0, 0, 0.75);
+  max-width: 90%;
+  color: black;
+  background-color: rgb(255, 255, 255, 0.6);
   padding: 20px 18px;
 }
 
 .language-selection h1 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 
 .language-selection h3 {
   margin-top: 30px;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .language-selection ul {
@@ -29,25 +28,25 @@
   width: 100%;
   display: flex;
   align-items: center;
-  border: none;
+  border: 1px solid #222;
   border-radius: 15px;
   margin: 5px auto;
   height: 50px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
-  background-color: rgb(245, 245, 245, 0.9);
+  background: linear-gradient(90deg, rgb(250,235,235) 0%, rgb(250,190,255) 30%, rgb(150,15,170) 85%);
   cursor: pointer;
 }  
 
 .language-button img {
-  height: 90%;
+  height: 80%;
   padding-right: 5px;
 }
 
 .language-button:hover {
-  background-color: #222;
+  background: linear-gradient(270deg, rgb(250,235,235) 0%, rgb(250,190,255) 30%, rgb(150,15,170) 85%);
+  animation: 1s linear;
   color: white;
-  border: 1px solid white;
 }
 
 .language-button:focus, .language-button:active {
@@ -58,7 +57,7 @@
 @media (min-width: 576px) and (max-width: 991px) {
   .language-selection {
     margin: 15vh auto;
-    width: 75%;
+    max-width: 70%;
     padding: 30px 20px;
   }
 
@@ -74,12 +73,16 @@
     width: 240px;
     font-size: 1.1rem;
   }
+
+  .language-button img {
+    height: 90%;
+  }
 }
 
 @media (min-width: 992px) {
   .language-selection {
     margin: 25vh auto;
-    width: 60%;
+    max-width: 50%;
     padding: 30px 20px;
   }
 
@@ -94,5 +97,9 @@
   .language-button {
     width: 250px;
     font-size: 1.15rem;
+  }
+
+  .language-button img {
+    height: 90%;
   }
 }

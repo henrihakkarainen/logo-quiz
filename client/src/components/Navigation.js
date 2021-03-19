@@ -37,14 +37,16 @@ const Navigation = (props) => {
           </LinkContainer>
         </Nav>
         <Dropdown className="mr-2">
-            <DropdownButton variant="light"
-                            title={
-                              <span>
-                                {i18n.language === 'en' ? 'English' : 'Suomi'}
-                                <img src={i18n.language === 'en' ? uk : fin}
-                                     alt={i18n.language === 'en' ? 'UK' : 'FIN'} />
-                              </span>
-                            }>
+            <DropdownButton
+              variant="light"
+              title={
+                <span>
+                  {i18n.language === 'en' ? 'English' : 'Suomi'}
+                  <img src={i18n.language === 'en' ? uk : fin}
+                       alt={i18n.language === 'en' ? 'UK' : 'FIN'} />
+                </span>
+              }
+            >
               <Dropdown.Header>{t('selectLanguage')}</Dropdown.Header>
               <Dropdown.Divider />
                 <Dropdown.Item active={i18n.language === 'en' ? true : false}

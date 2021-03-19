@@ -13,7 +13,6 @@ import Modal from './components/ModalForm';
 import routes from './config/routeConfig';
 
 import './App.css';
-// import 'react-responsive-modal/styles.css';
 
 const App = (props) => {
   const [ language, setLanguage ] = useState(localStorage.getItem('language'));

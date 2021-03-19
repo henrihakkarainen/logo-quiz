@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 
 import '../styles/ProgressBar.css';
 
-const ProgressBar = (props) => {
-  const { percent } = props;
+const ProgressBar = ({ percent }) => {
 
   const [ value, setValue ] = useState(0);
 

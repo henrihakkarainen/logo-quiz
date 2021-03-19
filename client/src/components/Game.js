@@ -258,11 +258,14 @@ const Game = (props) => {
                 return (
                   <Row className="question-row" key={i}>
                     <Button
-                      className="q-button"
+                      className={
+                        `q-button
+                        ${option === currentQuestion.correct && showCorrect ?
+                          `${buttonClasses.correct}` : ''}`
+                      }
                       variant="outlined"
                       style={{
-                        visibility: `${hide && currentQuestion.hide.includes(option) ? 'hidden' : 'visible'}`,
-                        backgroundColor: `${option === currentQuestion.correct && showCorrect ? 'rgb(0, 158, 0)' : 'rgba(65, 60, 60, 0.6)'}`
+                        visibility: `${hide && currentQuestion.hide.includes(option) ? 'hidden' : 'visible'}`
                       }}
                       onClick={(e) => {
                         if (timeRunning) {
@@ -331,7 +334,7 @@ const Game = (props) => {
         </Row>
         <Row style={{ margin: '20px -30px 0' }}>
           <Col sm={12}>
-            <ProgressBar percent={percent}/>
+            <ProgressBar percent={percent} />
           </Col>
         </Row>
         <Typography

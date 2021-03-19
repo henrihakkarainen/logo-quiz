@@ -1,9 +1,6 @@
 .game-container {
   margin: 30px 0;
   padding: 20px 40px;
-  background-color: rgb(255, 255, 255, 0.7);
-  border-radius: 5px;
-  height: auto;
 }
 
 .game-container .MuiCircularProgress-root {
@@ -38,8 +35,6 @@
 
 .logo-and-questions {
   margin: 10px 0;
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px;
   padding: 10px 0px;
 }
 
@@ -49,27 +44,38 @@
 
 .game-logo {
   max-width: 300px;
+  max-height: 300px;
+  border-radius: 25px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
 }
 
 .q-button {
   width: 100%;
-  color: white !important;
+  color: black !important;
   font-size: 0.9rem !important;
   font-weight: bold !important;
   text-transform: none !important;
-  border-color: rgb(0, 0, 0, 0.9) !important;
+  border-color: rgb(0, 0, 0) !important;
+  background-image: linear-gradient(to right, #ebe2c4, #ffffff) !important;
+}
+
+.q-button:hover {
+  background-image: linear-gradient(to left, #ebe2c4, #ffffff) !important;
 }
 
 .lifeline-btn {
   text-transform: none !important;
 }
 
-.correct-choice {
-  background-color: rgb(0, 158, 0) !important;
+.correct-choice, .correct-choice:hover {
+  color: white !important;
+  background-image: linear-gradient( to right,  #00b500, #00b500 ) !important;
 }
 
-.wrong-choice {
-  background-color: rgb(255, 80, 80) !important;
+.wrong-choice, .wrong-choice:hover {
+  color: white !important;
+  background-image: linear-gradient( to right, #ff5050 , #ff5050 ) !important;
 }
 
 .game-score {

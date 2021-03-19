@@ -1,6 +1,6 @@
 body {
   background-color: #A9C9FF;
-  background-image: linear-gradient( 180deg,  rgba(225,109,245,1) 7%, rgba(78,248,231,1) 112% );
+  background-image: linear-gradient( 180deg,  rgb(225,109,245) 7%, rgb(78,248,231) 112% );
   background-repeat: no-repeat;
   background-attachment: fixed;
   text-align: center !important;

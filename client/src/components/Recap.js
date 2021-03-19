@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useHistory } from "react-router-dom";
 import Button from '@material-ui/core/Button';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -16,6 +17,7 @@ import Typography from '@material-ui/core/Typography';
 const Recap = (props) => {
   const { score, round, handleStart, endReason } = props;
 
+  const history = useHistory();
   const [ t ] = useTranslation();
   const [ loading, setLoading ] = useState(true)
 
@@ -90,7 +92,11 @@ const Recap = (props) => {
           </Row>
           <Row>
             <Col>
-              <Button variant="contained" color="primary" onClick={handleStart}>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => history.push('/games')}
+              >
                 Valitse toinen peli
               </Button>
             </Col>

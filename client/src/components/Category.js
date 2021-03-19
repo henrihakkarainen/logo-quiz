@@ -21,10 +21,10 @@ const Category = (props) => {
       <ListGroup>
         <ListGroupItem>
           <LinkContainer to={`/play?category=${props.alias}`}>
-            <Card.Link>Play</Card.Link>
+            <Card.Link>{t('play')}</Card.Link>
           </LinkContainer>
           <LinkContainer to={`/highscores?category=${props.alias}`}>
-            <Card.Link>High scores</Card.Link>
+            <Card.Link>{t('highscores')}</Card.Link>
           </LinkContainer>
         </ListGroupItem>
       </ListGroup>

@@ -71,6 +71,7 @@ const create = async (req, res) => {
 }
 
 const findAll = async (req, res) => {
+  const { count } = req.query;
   try {
     const data = await HighScoreList.find({})
       .populate('category')
@@ -83,7 +84,34 @@ const findAll = async (req, res) => {
   }
 }
 
+const findOne = async (req, res) => {
+  const { id } = req.params;
+  const { count } = req.query;
+  try {
+    const data = await HighScoreList.findOne({ category: id })
+      .populate('category')
+      .populate('scores.user', 'username')
+    if (data) {
+      // Sort scores-array by points (descending)
+      data.scores.sort((a, b) => b.points - a.points)
+      // Return only specified amount of highscores
+      // (e.g. query parameter count=10 will return max 10 highest scores)
+      if (count && !isNaN(count)) data.scores.splice(count)
+      res.json(data)
+    } else {
+      return res.status(404).json({
+        message: 'Category not found'
+      })
+    }
+  } catch (err) {
+    res.status(500).json({
+      message: err.message || 'Server failed to retrieve highscores'
+    });
+  }
+}
+
 module.exports = {
   create,
-  findAll
+  findAll,
+  findOne
 }

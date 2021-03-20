@@ -29,8 +29,8 @@ router
 
 router
   .route('/:id([a-f0-9]{24})/highscores')
-  .all(auth.verifyToken)
-  .put(HighscoreController.create)
+  .get(HighscoreController.findOne)
+  .put(auth.verifyToken, HighscoreController.create)
 //.delete(auth.ensureAdmin)
 
 module.exports = router;

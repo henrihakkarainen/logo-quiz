@@ -19,6 +19,6 @@ router
 
 router
   .route('/refresh')
-  .post(AuthController.generateAccessToken)
+  .post(AuthController.refresh)
 
 module.exports = router;

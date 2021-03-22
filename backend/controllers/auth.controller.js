@@ -63,7 +63,7 @@ const login = async (req, res) => {
   }
 }
 
-const generateAccessToken = async (req, res) => {
+const refresh = async (req, res) => {
   const { refreshToken } = req.body;
   if (!refreshToken) {
     return res.status(403).json({
@@ -115,6 +115,6 @@ const logout = async (req, res) => {
 module.exports = {
   register,
   login,
-  generateAccessToken,
+  refresh,
   logout
 };

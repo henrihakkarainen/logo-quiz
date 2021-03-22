@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { openModal } from '../store/actions/appActions';
+import { logout } from '../store/actions/userActions';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
@@ -59,7 +60,12 @@ const Navigation = (props) => {
                 </Dropdown.Item>           
             </DropdownButton>
           </Dropdown>
-        <Button variant="outline-dark" onClick={() => props.openModal()}>{t('loginBtn')}</Button>
+          {
+            props.user.loggedIn ?
+            <Button variant="outline-dark" onClick={() => props.logout()}>Logout</Button>
+            :
+            <Button variant="outline-dark" onClick={() => props.openModal()}>{t('loginBtn')}</Button>
+          }
       </Navbar.Collapse>
     </Navbar>
   )
@@ -73,7 +79,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    openModal: () => dispatch(openModal())
+    openModal: () => dispatch(openModal()),
+    logout: () => dispatch(logout())
   }
 }
 

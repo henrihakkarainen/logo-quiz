@@ -83,7 +83,7 @@ const refresh = async (req, res) => {
       ACCESS_TOKEN_SECRET,
       { algorithm: 'HS256', expiresIn: '30m' }
     );
-    return res.json({ accessToken });
+    return res.json({ accessToken, user: decoded.user });
   } catch (err) {
     console.error(err);
     if (err.name === 'TokenExpiredError') {

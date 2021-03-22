@@ -13,4 +13,12 @@ router
   .route('/login')
   .post(AuthController.login)
 
+router
+  .route('/logout')
+  .delete(AuthController.logout)
+
+router
+  .route('/refresh')
+  .post(AuthController.generateAccessToken)
+
 module.exports = router;

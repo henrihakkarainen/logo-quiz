@@ -29,7 +29,8 @@ const db = {
   question: require('./question.model'),
   category: require('./category.model'),
   user: require('./user.model'),
-  highscores: require('./highscore.model')
+  highscores: require('./highscore.model'),
+  token: require('./token.model')
 };
 
 module.exports = db;

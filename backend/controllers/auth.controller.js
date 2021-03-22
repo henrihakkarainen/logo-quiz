@@ -2,8 +2,8 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
 const db = require('../models');
-const SECRET = require('config').get('session').secret;
-const User = db.user;
+const { ACCESS_TOKEN_SECRET, REFRESH_TOKEN_SECRET } = process.env;
+const { token: Token, user: User } = db;
 
 const register = async (req, res) => {
   const { username, email, password } = req.body;
@@ -28,7 +28,7 @@ const register = async (req, res) => {
 }
 
 const login = async (req, res) => {
-  const { username, password } = req.body;
+  const { username, password, rememberMe } = req.body;
   if (!username || !password) {
     return res.status(400).json({
       message: 'Username and password are required for login'
@@ -44,10 +44,11 @@ const login = async (req, res) => {
     }
     const result = await bcrypt.compare(password, user.password);
     if (result) {
-      const token = await jwt.sign({ id: user._id }, SECRET, { algorithm: 'HS256' })
+      const accessToken = await user.createAccessToken();
+      const refreshToken = await user.createRefreshToken(rememberMe);
       return res.status(200).json({
-        token,
-        role: user.role,
+        accessToken,
+        refreshToken,
         id: user._id
       });
     } else {
@@ -62,7 +63,58 @@ const login = async (req, res) => {
   }
 }
 
+const generateAccessToken = async (req, res) => {
+  const { refreshToken } = req.body;
+  if (!refreshToken) {
+    return res.status(403).json({
+      message: 'Token missing'
+    });
+  }
+  try {
+    const token = await Token.findOne({ token: refreshToken });
+    if (!token) {
+      return res.status(401).json({
+        message: 'Token not found'
+      });
+    }
+    const decoded = jwt.verify(token.token, REFRESH_TOKEN_SECRET);
+    const accessToken = jwt.sign(
+      { user: decoded.user },
+      ACCESS_TOKEN_SECRET,
+      { algorithm: 'HS256', expiresIn: '30m' }
+    );
+    return res.json({ accessToken });
+  } catch (err) {
+    console.error(err);
+    if (err.name === 'TokenExpiredError') {
+      return res.status(401).json({
+        message: 'Token expired'
+      });
+    }
+    return res.status(500).json({
+      message: 'Access token generation failed'
+    });
+  }  
+}
+
+const logout = async (req, res) => {
+  const { refreshToken } = req.body;
+  try {
+    await Token.findOneAndDelete({ token: refreshToken });
+    return res.json({
+      message: 'Succesfully logged out'
+    });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({
+      message: 'Logout failed?'
+    });
+  }
+}
+
 module.exports = {
   register,
-  login
+  login,
+  generateAccessToken,
+  logout
 };

@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const db = require('../models');
 const User = db.user;
-const SECRET = require('config').get('session').secret;
+const SECRET = process.env.ACCESS_TOKEN_SECRET;
 
 const verifyToken = async (req, res, next) => {
   const authHeader = req.headers.authorization;
@@ -15,12 +15,23 @@ const verifyToken = async (req, res, next) => {
 
     try {
       const decoded = jwt.verify(token, SECRET);
-      req.user = { id: decoded.id };
+      req.user = { id: decoded.user._id };
       next();
     } catch (err) {
-      return res.status(401).json({
-        message: 'Unauthorized'
-      });
+      switch (err.name) {
+        case 'TokenExpiredError':
+          return res.status(401).json({
+            message: 'Session timed out'
+          });
+        case 'JsonWebTokenError':
+          return res.status(401).json({
+            message: 'Invalid token'
+          });
+        default:
+          return res.status(400).json({
+            message: 'Unknown error with token verification'
+          });
+      }
     }
   } else {
     return res.status(401).json({

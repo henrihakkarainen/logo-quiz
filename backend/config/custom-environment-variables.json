@@ -1,6 +1,7 @@
 {
-  "session": {
-    "secret": "SECRET"
+  "token": {
+    "access_secret": "ACCESS_TOKEN_SECRET",
+    "refresh_secret": "REFRESH_TOKEN_SECRET"
   },
 
   "admin": {

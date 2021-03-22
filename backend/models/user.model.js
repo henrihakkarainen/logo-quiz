@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const Schema = mongoose.Schema;
+const Token = require('./token.model');
+const { ACCESS_TOKEN_SECRET, REFRESH_TOKEN_SECRET } = process.env;
 
 const userSchema = new Schema({
   username: {
@@ -39,6 +42,40 @@ const userSchema = new Schema({
     default: 'normal'
   }
 });
+
+userSchema.methods = {
+  createAccessToken: async function() {
+    try {
+      const { _id, username } = this;
+      const accessToken = jwt.sign(
+        { user: { _id, username } },
+        ACCESS_TOKEN_SECRET,
+        { algorithm: 'HS256', expiresIn: '30m' }
+      );
+      return accessToken;
+    } catch (err) {
+      console.error(err);
+      return;
+    }
+  },
+
+  createRefreshToken: async function(remember) {
+    try {
+      const { _id, username } = this;
+      const refreshToken = jwt.sign(
+        { user: { _id, username } },
+        REFRESH_TOKEN_SECRET,
+        { algorithm: 'HS256', expiresIn: remember ? '30d' : '1d' }
+      );
+      
+      await new Token({ token: refreshToken }).save();
+      return refreshToken
+    } catch (err) {
+      console.error(err);
+      return;
+    }
+  }
+}
 
 userSchema.set('toJSON', {
   virtuals: true,
